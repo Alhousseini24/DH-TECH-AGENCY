@@ -1,0 +1,627 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#f5a315" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notre équipe | DH TECH AGENCY</title>
+  <meta name="description" content="Découvrez l'équipe de DH TECH AGENCY : développeurs, marketers, designers, formateurs et experts IA." />
+  <meta name="author" content="DH TECH AGENCY" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dhtechagency.com/pages/equipe.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="DH TECH AGENCY" />
+  <meta property="og:title" content="Notre équipe | DH TECH AGENCY" />
+  <meta property="og:description" content="Découvrez l'équipe de DH TECH AGENCY : développeurs, marketers, designers, formateurs et experts IA." />
+  <meta property="og:url" content="https://www.dhtechagency.com/pages/equipe.html" />
+  <meta property="og:image" content="https://www.dhtechagency.com/assets/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Notre équipe | DH TECH AGENCY" />
+  <meta name="twitter:description" content="Découvrez l'équipe de DH TECH AGENCY : développeurs, marketers, designers, formateurs et experts IA." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="apple-touch-icon" href="../assets/icons/Logo .png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/variables.css" />
+
+  <!-- Google Analytics GA4 (remplacez G-XXXXXXXXXX par votre ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.dhtechagency.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Équipe", "item": "https://www.dhtechagency.com/pages/equipe.html" }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alhousseiny Aboubacrine DICKO",
+    "jobTitle": "Fondateur & Directeur",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "DH TECH AGENCY"
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== STYLES SPÉCIFIQUES PAGE ÉQUIPE ===== */
+    
+    /* Carte membre avec photo */
+    .team-card-photo {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      height: 100%;
+      cursor: pointer;
+    }
+    
+    .team-card-photo:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      border-color: var(--color-orange);
+    }
+    
+    /* Conteneur photo */
+    .team-photo-wrapper {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--color-gray-900), var(--color-black));
+    }
+    
+    .team-photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.6s ease;
+    }
+    
+    .team-card-photo:hover .team-photo-wrapper img {
+      transform: scale(1.08);
+      filter: brightness(1.1);
+    }
+    
+    /* Overlay gradient sur la photo */
+    .team-photo-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    
+    .team-card-photo:hover .team-photo-overlay {
+      opacity: 1;
+    }
+    
+    /* Réseaux sociaux sur la photo */
+    .team-social-links {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      display: flex;
+      gap: 12px;
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 2;
+    }
+    
+    .team-card-photo:hover .team-social-links {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    .team-social-links a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--color-orange);
+      color: var(--color-black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+    
+    .team-social-links a:hover {
+      background: var(--color-white);
+      transform: scale(1.15);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Badge "Expert" sur la photo */
+    .team-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--color-orange);
+      color: var(--color-black);
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 2;
+      box-shadow: 0 4px 12px rgba(245, 163, 21, 0.4);
+    }
+    
+    /* Corps de la carte */
+    .team-card-body {
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+      background: var(--color-white);
+      transition: background 0.5s ease;
+    }
+    
+    .team-card-photo:hover .team-card-body {
+      background: var(--color-white);
+    }
+    
+    .team-card-body h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      color: var(--color-black);
+      transition: color 0.3s ease;
+    }
+    
+    .team-card-photo:hover .team-card-body h3 {
+      color: var(--color-orange);
+    }
+    
+    .team-card-body .role {
+      display: inline-block;
+      color: var(--color-orange);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    
+    .team-card-body p {
+      color: var(--color-gray-500);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    /* Ligne décorative sous le rôle */
+    .team-divider {
+      width: 40px;
+      height: 3px;
+      background: var(--color-orange);
+      margin: 0.75rem auto;
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+    
+    .team-card-photo:hover .team-divider {
+      width: 60px;
+    }
+    
+    /* Animations d'entrée */
+    .team-card-photo {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease, border-color 0.5s ease;
+    }
+    
+    .team-card-photo.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Délai d'animation en cascade */
+    .team-card-photo:nth-child(1) { transition-delay: 0.1s; }
+    .team-card-photo:nth-child(2) { transition-delay: 0.2s; }
+    .team-card-photo:nth-child(3) { transition-delay: 0.3s; }
+    .team-card-photo:nth-child(4) { transition-delay: 0.4s; }
+    .team-card-photo:nth-child(5) { transition-delay: 0.5s; }
+    .team-card-photo:nth-child(6) { transition-delay: 0.6s; }
+    
+    /* Effet de brillance sur la photo */
+    .team-photo-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transform: skewX(-25deg);
+      transition: left 0.8s ease;
+      pointer-events: none;
+    }
+    
+    .team-card-photo:hover .team-photo-wrapper::after {
+      left: 100%;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .team-photo-wrapper {
+        aspect-ratio: 1 / 1;
+      }
+      
+      .team-social-links {
+        bottom: 15px;
+      }
+      
+      .team-social-links a {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../index.html" class="brand" aria-label="DH TECH AGENCY - Accueil">
+          <img src="../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto; border-radius: 8px;">
+          <span>DH TECH AGENCY<small>Le digital au service de votre croissance</small></span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="devis.html" class="btn btn-primary btn-sm desktop-cta">Demander un devis</a>
+          <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+      </nav>
+      
+      <!-- Menu mobile -->
+      <div class="nav-menu-mobile" id="mobileMenu">
+        <ul class="nav-links-mobile">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="devis.html" class="btn btn-primary btn-block">Demander un devis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'ariane">
+          <a href="../index.html">Accueil</a> <span>/</span> <span>Équipe</span>
+        </nav>
+        <span class="eyebrow">Notre équipe</span>
+        <h1>Des experts passionnés du numérique</h1>
+        <p>Une équipe pluridisciplinaire au service de votre transformation digitale. Découvrez les talents qui font la force de DH TECH AGENCY.</p>
+      </div>
+    </section>
+
+    <!-- ===== SECTION ÉQUIPE ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          
+          <!-- Membre 1 : Fondateur -->
+          <div class="col-md-6 col-lg-4">
+            <article class="team-card-photo" data-aos="fade-up">
+              <div class="team-photo-wrapper">
+                <span class="team-badge">Fondateur</span>
+                <img src="../assets/team/alhousseiny-dicko.jpg" alt="Alhousseiny Aboubacrine DICKO - Fondateur & Directeur de DH TECH AGENCY" loading="lazy" />
+                <div class="team-photo-overlay"></div>
+                <div class="team-social-links">
+                  <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.6 4.75 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>
+                  </a>
+                  <a href="#" aria-label="Twitter" title="Twitter">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  </a>
+                  <a href="#" aria-label="Email" title="Email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="team-card-body">
+                <h3>Alhousseiny Aboubacrine DICKO</h3>
+                <span class="role">Fondateur &amp; Directeur</span>
+                <div class="team-divider"></div>
+                <p>Vision, stratégie et pilotage de l'agence. Passionné par la transformation numérique et l'innovation en Afrique.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Membre 2 : Développeur -->
+          <div class="col-md-6 col-lg-4">
+            <article class="team-card-photo" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-photo-wrapper">
+                <span class="team-badge">Expert Tech</span>
+                <img src="../assets/team/developpeur-web.jpg" alt="Développeur Web - Expert technique DH TECH AGENCY" loading="lazy" />
+                <div class="team-photo-overlay"></div>
+                <div class="team-social-links">
+                  <a href="#" aria-label="GitHub" title="GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </a>
+                  <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.6 4.75 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>
+                  </a>
+                  <a href="#" aria-label="Email" title="Email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="team-card-body">
+                <h3>Développeur Web</h3>
+                <span class="role">Développement &amp; Technique</span>
+                <div class="team-divider"></div>
+                <p>Conception et développement de sites web, applications et solutions digitales performantes.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Membre 3 : Marketing -->
+          <div class="col-md-6 col-lg-4">
+            <article class="team-card-photo" data-aos="fade-up" data-aos-delay="200">
+              <div class="team-photo-wrapper">
+                <span class="team-badge">Expert Marketing</span>
+                <img src="../assets/team/expert-marketing.jpg" alt="Expert Marketing Digital - DH TECH AGENCY" loading="lazy" />
+                <div class="team-photo-overlay"></div>
+                <div class="team-social-links">
+                  <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.6 4.75 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>
+                  </a>
+                  <a href="#" aria-label="Email" title="Email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="team-card-body">
+                <h3>Expert Marketing Digital</h3>
+                <span class="role">Marketing &amp; Acquisition</span>
+                <div class="team-divider"></div>
+                <p>Stratégies d'acquisition, publicité en ligne et développement de la visibilité.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Membre 4 : Designer -->
+          <div class="col-md-6 col-lg-4">
+            <article class="team-card-photo" data-aos="fade-up" data-aos-delay="300">
+              <div class="team-photo-wrapper">
+                <span class="team-badge">Créatif</span>
+                <img src="../assets/team/designer.jpg" alt="Designer - Identité visuelle DH TECH AGENCY" loading="lazy" />
+                <div class="team-photo-overlay"></div>
+                <div class="team-social-links">
+                  <a href="#" aria-label="Behance" title="Behance">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8.84 10.835c.908-.45 1.53-1.3 1.53-2.6 0-2.3-1.8-3.1-4.1-3.1H0v13.2h6.6c2.4 0 4.4-1.1 4.4-3.7 0-2-1.2-3.2-2.16-3.8zM3.4 7.6h2.5c1 0 1.9.4 1.9 1.5 0 1.2-1 1.6-2 1.6H3.4zm3 8.3H3.4v-3.5h3.1c1.2 0 2.1.6 2.1 1.8 0 1.2-1 1.7-2.2 1.7zm10.7-7.8c-2.2 0-3.9 1.3-3.9 4.1 0 2.9 1.8 4.4 4.1 4.4 1.9 0 3.2-.9 3.7-2.7h-2.2c-.2.6-.7.9-1.4.9-1 0-1.6-.6-1.6-1.6h5.5v-.6c.1-2.6-1.1-4.5-4.2-4.5zm-1.6 3.2c.1-1 .6-1.5 1.6-1.5 1 0 1.5.5 1.6 1.5zm-2.4 5.1h-6v-1.6h6zm6.7-5.2h-2.4v-1.5h2.4z"/></svg>
+                  </a>
+                  <a href="#" aria-label="Email" title="Email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="team-card-body">
+                <h3>Designer</h3>
+                <span class="role">Design &amp; Identité visuelle</span>
+                <div class="team-divider"></div>
+                <p>Création d'identités visuelles, de supports graphiques et d'expériences utilisateur.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Membre 5 : Community Manager -->
+          <div class="col-md-6 col-lg-4">
+            <article class="team-card-photo" data-aos="fade-up" data-aos-delay="400">
+              <div class="team-photo-wrapper">
+                <span class="team-badge">Social Media</span>
+                <img src="../assets/team/community-manager.jpg" alt="Community Manager - Réseaux sociaux DH TECH AGENCY" loading="lazy" />
+                <div class="team-photo-overlay"></div>
+                <div class="team-social-links">
+                  <a href="#" aria-label="Instagram" title="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+                  </a>
+                  <a href="#" aria-label="Email" title="Email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="team-card-body">
+                <h3>Community Manager</h3>
+                <span class="role">Réseaux sociaux</span>
+                <div class="team-divider"></div>
+                <p>Animation des communautés, stratégie éditoriale et engagement sur les réseaux sociaux.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Membre 6 : Expert IA -->
+          <div class="col-md-6 col-lg-4">
+            <article class="team-card-photo" data-aos="fade-up" data-aos-delay="500">
+              <div class="team-photo-wrapper">
+                <span class="team-badge">IA Expert</span>
+                <img src="../assets/team/expert-ia.jpg" alt="Expert Intelligence Artificielle - DH TECH AGENCY" loading="lazy" />
+                <div class="team-photo-overlay"></div>
+                <div class="team-social-links">
+                  <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.6 4.75 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>
+                  </a>
+                  <a href="#" aria-label="Email" title="Email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="team-card-body">
+                <h3>Expert Intelligence Artificielle</h3>
+                <span class="role">IA &amp; Automatisation</span>
+                <div class="team-divider"></div>
+                <p>Chatbots, automatisation des processus et solutions IA adaptées aux besoins des entreprises.</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-5">
+          <a href="devis.html" class="btn btn-primary btn-lg">Travailler avec notre équipe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand-logo">
+            <img src="../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto; border-radius: 8px;">
+            <div class="brand-text">
+              DH TECH AGENCY
+              <small>Le digital au service de votre croissance</small>
+            </div>
+          </div>
+          <p class="mb-3" style="font-size:0.92rem">Agence de transformation digitale et centre de formation numérique. Le digital au service de votre croissance.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1 .3-1.7 1.8-1.7H17V2.2c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v4h3v8z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.6 4.75 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+            <a href="https://wa.me/22369023957" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services/marketing-digital.html">Marketing digital</a></li>
+            <li><a href="services/communication-digitale.html">Communication digitale</a></li>
+            <li><a href="services/reseaux-sociaux.html">Réseaux sociaux</a></li>
+            <li><a href="services/branding-identite-visuelle.html">Branding</a></li>
+            <li><a href="services/redaction-documents.html">Rédaction de documents</a></li>
+            <li><a href="services.html">Tous les services</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="equipe.html">Équipe</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="etudes-de-cas.html">Études de cas</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4">
+          <h4>Contact</h4>
+          <ul>
+            <li>Bamako, Mali</li>
+            <li><a href="tel:+22369023957">+223 69-02-39-57</a></li>
+            <li><a href="https://wa.me/22369023957" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contact@dhtechagency.com">contact@dhtechagency.com</a></li>
+            <li><a href="contact.html">Nous contacter</a></li>
+            <li><a href="devis.html">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2025</span> DH TECH AGENCY. Tous droits réservés.</span>
+        <span>Le digital au service de votre croissance</span>
+        <span>
+          <a href="mentions-legales.html">Mentions légales</a> ·
+          <a href="politique-confidentialite.html">Confidentialité</a> ·
+          <a href="cgu.html">CGU</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20discuter%20de%20mon%20projet." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../js/main.js"></script>
+  <script defer src="../js/analytics.js"></script>
+  
+  <!-- Script d'animation au scroll -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Intersection Observer pour les animations au scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      
+      // Observer toutes les cartes d'équipe
+      document.querySelectorAll('.team-card-photo').forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

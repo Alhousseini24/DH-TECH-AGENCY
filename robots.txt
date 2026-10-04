@@ -1,0 +1,11 @@
+# robots.txt — DH TECH AGENCY
+# https://www.dhtechagency.com/
+
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /assets/videos/
+
+# Sitemap
+Sitemap: https://www.dhtechagency.com/sitemap.xml

@@ -1,0 +1,790 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#f5a315" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Digital | Stratégies & Campagnes | DH TECH AGENCY</title>
+  <meta name="description" content="Stratégies de marketing digital complètes : SEO, publicité en ligne, réseaux sociaux, email marketing. Augmentez votre visibilité et vos conversions avec DH TECH AGENCY." />
+  <meta name="keywords" content="marketing digital Mali, SEO Bamako, publicité Facebook Mali, Google Ads, stratégie marketing, DH TECH AGENCY" />
+  <meta name="author" content="DH TECH AGENCY" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dhtechagency.com/pages/services/marketing-digital.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="DH TECH AGENCY" />
+  <meta property="og:title" content="Marketing Digital | DH TECH AGENCY" />
+  <meta property="og:description" content="Stratégies marketing digital complètes : SEO, publicité en ligne, réseaux sociaux, email marketing." />
+  <meta property="og:url" content="https://www.dhtechagency.com/pages/services/marketing-digital.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/icons/Logo .png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+  <link rel="stylesheet" href="../../css/variables.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
+
+  <style>
+    /* ============================================================
+       STYLES SPÉCIFIQUES PAGE MARKETING DIGITAL
+       ============================================================ */
+    
+    /* Hero */
+    .marketing-hero {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a0a 30%, #2a1a0a 60%, #0a0a0a 100%);
+      padding: calc(var(--header-height) + 3rem) 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .marketing-hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.15), transparent 70%);
+      border-radius: 50%;
+      animation: marketingPulse 4s ease-in-out infinite;
+    }
+    
+    .marketing-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.1), transparent 70%);
+      border-radius: 50%;
+      animation: marketingPulse 5s ease-in-out infinite reverse;
+    }
+    
+    @keyframes marketingPulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+    
+    /* Cartes marketing animées */
+    .marketing-card {
+      position: relative;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      height: 100%;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    
+    .marketing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a0a 50%, #2a1a0a 100%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
+    
+    .marketing-card:hover::before {
+      opacity: 1;
+    }
+    
+    .marketing-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(245, 163, 21, 0.08) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .marketing-card:hover::after {
+      opacity: 1;
+      animation: marketingGlow 3s ease-in-out infinite;
+    }
+    
+    @keyframes marketingGlow {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(5%, -5%) scale(1.1); }
+      66% { transform: translate(-5%, 5%) scale(1.05); }
+    }
+    
+    .marketing-card-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .marketing-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+      border-color: var(--color-orange);
+    }
+    
+    /* Icône marketing animée */
+    .marketing-icon {
+      width: 85px;
+      height: 85px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, rgba(245, 163, 21, 0.15), rgba(245, 163, 21, 0.05));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .marketing-icon::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 0deg, transparent, rgba(245, 163, 21, 0.4), transparent, rgba(245, 163, 21, 0.4), transparent);
+      animation: marketingIconSpin 4s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .marketing-card:hover .marketing-icon::before {
+      opacity: 1;
+    }
+    
+    @keyframes marketingIconSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .marketing-icon span {
+      position: relative;
+      z-index: 2;
+      transition: transform 0.6s ease;
+    }
+    
+    .marketing-card:hover .marketing-icon {
+      background: var(--color-orange);
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 15px 40px rgba(245, 163, 21, 0.5);
+      border-radius: 50%;
+    }
+    
+    .marketing-card:hover .marketing-icon span {
+      transform: scale(1.2);
+    }
+    
+    /* Titre et texte */
+    .marketing-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      transition: color 0.4s ease, transform 0.4s ease;
+    }
+    
+    .marketing-card:hover h3 {
+      color: var(--color-orange);
+      transform: translateX(5px);
+    }
+    
+    .marketing-card p {
+      color: var(--color-gray-500);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      transition: color 0.4s ease;
+    }
+    
+    .marketing-card:hover p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    
+    /* Liste */
+    .marketing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    
+    .marketing-card ul li {
+      padding: 0.4rem 0;
+      color: var(--color-gray-600);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .marketing-card:hover ul li {
+      color: rgba(255, 255, 255, 0.7);
+      transform: translateX(5px);
+    }
+    
+    .marketing-card ul li::before {
+      content: '📈';
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .marketing-card:hover ul li::before {
+      transform: scale(1.3);
+    }
+    
+    /* Badge */
+    .marketing-badge {
+      position: absolute;
+      top: 20px;
+      right: -35px;
+      background: var(--color-orange);
+      color: var(--color-black);
+      padding: 0.4rem 2.5rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 3;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    
+    .marketing-card:hover .marketing-badge {
+      opacity: 1;
+      right: -25px;
+    }
+    
+    /* Statistiques animées */
+    .marketing-stat {
+      text-align: center;
+      padding: 2rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .marketing-stat:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      border-color: var(--color-orange);
+    }
+    
+    .marketing-stat .stat-value {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--color-orange);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      transition: transform 0.4s ease;
+    }
+    
+    .marketing-stat:hover .stat-value {
+      transform: scale(1.15);
+    }
+    
+    .marketing-stat .stat-label {
+      color: var(--color-gray-500);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    
+    /* Plateformes */
+    .platform-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-full);
+      background: var(--color-white);
+      border: 2px solid var(--color-gray-200);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-gray-700);
+      margin: 0.4rem;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .platform-pill:hover {
+      border-color: var(--color-orange);
+      color: var(--color-orange);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 30px rgba(245, 163, 21, 0.25);
+    }
+    
+    /* Processus */
+    .marketing-process-step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+    }
+    
+    .marketing-process-step .step-dot {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--color-black);
+      border: 3px solid var(--color-orange);
+      color: var(--color-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin: 0 auto 1.25rem;
+      position: relative;
+      transition: all 0.5s ease;
+    }
+    
+    .marketing-process-step:hover .step-dot {
+      background: var(--color-orange);
+      color: var(--color-black);
+      transform: scale(1.2) rotate(360deg);
+      box-shadow: 0 0 0 10px rgba(245, 163, 21, 0.15);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .marketing-card {
+        padding: 2rem 1.5rem;
+      }
+      
+      .marketing-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 2.2rem;
+      }
+      
+      .marketing-stat .stat-value {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../../index.html" class="brand" aria-label="DH TECH AGENCY - Accueil">
+          <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto; border-radius: 8px;">
+          <span>DH TECH AGENCY<small>Le digital au service de votre croissance</small></span>
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="../devis.html" class="btn btn-primary btn-sm desktop-cta">Demander un devis</a>
+          <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      
+      <div class="nav-menu-mobile" id="mobileMenu">
+        <ul class="nav-links-mobile">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="../devis.html" class="btn btn-primary btn-block">Demander un devis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="marketing-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'ariane">
+        <a href="../../index.html">Accueil</a> <span>/</span>
+        <a href="../services.html">Services</a> <span>/</span>
+        <span>Marketing Digital</span>
+      </nav>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="eyebrow">Service marketing</span>
+          <h1 style="color: var(--color-white); font-size: clamp(2.2rem, 4.5vw, 3.2rem); margin-bottom: 1.25rem; line-height: 1.15;">
+            Marketing Digital &amp; <span style="color: var(--color-orange);">Croissance</span>
+          </h1>
+          <p style="color: rgba(255, 255, 255, 0.75); font-size: 1.1rem; max-width: 600px; margin-bottom: 2rem;">
+            Des stratégies marketing complètes pour accroître votre visibilité, engager votre audience 
+            et convertir vos prospects en clients fidèles.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="../devis.html" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
+            <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20une%20stratégie%20marketing." class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">
+              Discuter sur WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div style="font-size: 8rem; animation: marketingPulse 3s ease-in-out infinite;">📈</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ===== SECTION CARTES PRINCIPALES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Nos stratégies</span>
+          <h2 class="section-title">Des solutions marketing complètes</h2>
+          <p class="section-sub">De la stratégie à l'exécution, nous déployons des campagnes qui génèrent des résultats mesurables.</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Carte 1 : SEO -->
+          <div class="col-md-6 col-lg-3">
+            <div class="marketing-card">
+              <span class="marketing-badge">Top 1</span>
+              <div class="marketing-card-content">
+                <div class="marketing-icon"><span>🔍</span></div>
+                <h3>SEO / Référencement</h3>
+                <p>Positionnez votre site en tête des résultats Google et attirez un trafic qualifié.</p>
+                <ul>
+                  <li>Audit SEO complet</li>
+                  <li>Optimisation on-page &amp; off-page</li>
+                  <li>Netlinking &amp; backlinks</li>
+                  <li>SEO local (Google Maps)</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 2 : Publicité -->
+          <div class="col-md-6 col-lg-3">
+            <div class="marketing-card">
+              <span class="marketing-badge">ROI Max</span>
+              <div class="marketing-card-content">
+                <div class="marketing-icon"><span>📢</span></div>
+                <h3>Publicité En Ligne</h3>
+                <p>Des campagnes publicitaires ciblées qui maximisent votre retour sur investissement.</p>
+                <ul>
+                  <li>Google Ads &amp; Bing Ads</li>
+                  <li>Facebook &amp; Instagram Ads</li>
+                  <li>TikTok Ads</li>
+                  <li>LinkedIn Ads B2B</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 3 : Réseaux Sociaux -->
+          <div class="col-md-6 col-lg-3">
+            <div class="marketing-card">
+              <span class="marketing-badge">Engagement</span>
+              <div class="marketing-card-content">
+                <div class="marketing-icon"><span>📱</span></div>
+                <h3>Social Media Marketing</h3>
+                <p>Développez votre communauté et créez un engagement durable avec votre audience.</p>
+                <ul>
+                  <li>Stratégie social media</li>
+                  <li>Création de contenus</li>
+                  <li>Gestion de communauté</li>
+                  <li>Campagnes d'influence</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 4 : Email Marketing -->
+          <div class="col-md-6 col-lg-3">
+            <div class="marketing-card">
+              <span class="marketing-badge">Conversion</span>
+              <div class="marketing-card-content">
+                <div class="marketing-icon"><span>📧</span></div>
+                <h3>Email Marketing</h3>
+                <p>Des campagnes email automatisées qui fidélisent vos clients et génèrent des ventes.</p>
+                <ul>
+                  <li>Newsletters engageantes</li>
+                  <li>Séquences automatisées</li>
+                  <li>Segmentation avancée</li>
+                  <li>A/B testing</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION STATISTIQUES ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Nos résultats</span>
+          <h2 class="section-title">Des chiffres qui parlent</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="marketing-stat">
+              <div class="stat-value" data-count="150" data-suffix="%">0%</div>
+              <div class="stat-label">Augmentation du trafic</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="marketing-stat">
+              <div class="stat-value" data-count="3" data-suffix="x">0x</div>
+              <div class="stat-label">Retour sur investissement</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="marketing-stat">
+              <div class="stat-value" data-count="80" data-suffix="%">0%</div>
+              <div class="stat-label">Taux de conversion</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="marketing-stat">
+              <div class="stat-value" data-count="500" data-suffix="+">0+</div>
+              <div class="stat-label">Campagnes réalisées</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION PLATEFORMES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Plateformes</span>
+          <h2 class="section-title">Nous maîtrisons les plateformes clés</h2>
+          <p class="section-sub">Votre marque présente là où se trouve votre audience.</p>
+        </div>
+        <div class="text-center">
+          <span class="platform-pill">🔍 Google</span>
+          <span class="platform-pill">📘 Facebook</span>
+          <span class="platform-pill">📸 Instagram</span>
+          <span class="platform-pill">💼 LinkedIn</span>
+          <span class="platform-pill">🎵 TikTok</span>
+          <span class="platform-pill">▶️ YouTube</span>
+          <span class="platform-pill">🐦 Twitter/X</span>
+          <span class="platform-pill">📌 Pinterest</span>
+          <span class="platform-pill">💬 WhatsApp Business</span>
+          <span class="platform-pill">📊 Google Analytics</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION PROCESSUS ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Notre méthode</span>
+          <h2 class="section-title">Comment nous boostons votre visibilité</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="marketing-process-step">
+              <div class="step-dot">1</div>
+              <h3>Audit</h3>
+              <p class="text-muted">Analyse de votre présence en ligne et de vos concurrents.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="marketing-process-step">
+              <div class="step-dot">2</div>
+              <h3>Stratégie</h3>
+              <p class="text-muted">Élaboration d'un plan d'action personnalisé.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="marketing-process-step">
+              <div class="step-dot">3</div>
+              <h3>Exécution</h3>
+              <p class="text-muted">Déploiement des campagnes et création de contenus.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="marketing-process-step">
+              <div class="step-dot">4</div>
+              <h3>Optimisation</h3>
+              <p class="text-muted">Suivi des performances et amélioration continue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION POURQUOI NOUS CHOISIR ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="eyebrow">Pourquoi nous choisir ?</span>
+            <h2 class="section-title">Votre partenaire de croissance digitale</h2>
+            <ul class="check-list mt-4">
+              <li><strong>Approche data-driven</strong> — Décisions basées sur les données</li>
+              <li><strong>Reporting transparent</strong> — Suivi clair de vos KPIs</li>
+              <li><strong>Équipe certifiée</strong> — Experts Google, Meta et TikTok</li>
+              <li><strong>Adaptation locale</strong> — Connaissance du marché malien</li>
+              <li><strong>ROI mesurable</strong> — Chaque franc investi est tracé</li>
+              <li><strong>Veille constante</strong> — À jour des dernières tendances</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 rounded-4 shadow" style="background: var(--color-white); border: 2px solid var(--color-orange);">
+              <h3 class="mb-4 text-center">🎯 Ce que nous pouvons faire pour vous</h3>
+              <ul class="check-list">
+                <li>Augmenter votre visibilité sur Google</li>
+                <li>Générer des leads qualifiés</li>
+                <li>Développer votre communauté sur les réseaux</li>
+                <li>Améliorer votre taux de conversion</li>
+                <li>Fidéliser vos clients existants</li>
+                <li>Lancer une campagne publicitaire rentable</li>
+                <li>Créer du contenu viral</li>
+                <li>Mesurer et optimiser vos performances</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="../devis.html" class="btn btn-primary btn-lg">Booster ma visibilité</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION CTA ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-band">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2>Prêt à dominer votre marché ?</h2>
+              <p>Contactez-nous et obtenez une stratégie marketing gratuite sous 48h.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="../devis.html" class="btn btn-dark btn-lg">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand-logo">
+            <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto;">
+            <div class="brand-text">
+              DH TECH AGENCY
+              <small>Le digital au service de votre croissance</small>
+            </div>
+          </div>
+          <p class="mb-3" style="font-size:0.92rem">Agence de transformation digitale et centre de formation numérique.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="https://wa.me/22369023957" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+            <a href="#" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="marketing-digital.html" class="active">Marketing digital</a></li>
+            <li><a href="communication-digitale.html">Communication digitale</a></li>
+            <li><a href="reseaux-sociaux.html">Réseaux sociaux</a></li>
+            <li><a href="branding-identite-visuelle.html">Branding</a></li>
+            <li><a href="creation-sites-web.html">Développement web</a></li>
+            <li><a href="../services.html">Tous les services</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="../a-propos.html">À propos</a></li>
+            <li><a href="../equipe.html">Équipe</a></li>
+            <li><a href="../realisations.html">Réalisations</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4">
+          <h4>Contact</h4>
+          <ul>
+            <li>Bamako, Mali</li>
+            <li><a href="tel:+22369023957">+223 69-02-39-57</a></li>
+            <li><a href="https://wa.me/22369023957" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contact@dhtechagency.com">contact@dhtechagency.com</a></li>
+            <li><a href="../devis.html">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2025</span> DH TECH AGENCY. Tous droits réservés.</span>
+        <span>Le digital au service de votre croissance</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20une%20stratégie%20marketing." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/analytics.js"></script>
+</body>
+</html>

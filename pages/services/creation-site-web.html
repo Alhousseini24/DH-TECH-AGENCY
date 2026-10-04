@@ -1,0 +1,762 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#f5a315" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Développement Web, Applications & Logiciels Sur Mesure | DH TECH AGENCY</title>
+  <meta name="description" content="Création de sites web professionnels, applications mobiles iOS & Android, logiciels sur mesure, ERP, CRM et solutions digitales personnalisées à Bamako, Mali." />
+  <meta name="keywords" content="création site web Mali, développement application mobile, logiciel sur mesure, ERP CRM Mali, site e-commerce Bamako, DH TECH AGENCY" />
+  <meta name="author" content="DH TECH AGENCY" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dhtechagency.com/pages/services/creation-sites-web.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="DH TECH AGENCY" />
+  <meta property="og:title" content="Développement Web, Applications & Logiciels Sur Mesure | DH TECH AGENCY" />
+  <meta property="og:description" content="Création de sites web, applications mobiles et logiciels sur mesure. Solutions digitales performantes et sécurisées." />
+  <meta property="og:url" content="https://www.dhtechagency.com/pages/services/creation-sites-web.html" />
+  <meta property="og:image" content="https://www.dhtechagency.com/assets/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Développement Web & Mobile | DH TECH AGENCY" />
+  <meta name="twitter:description" content="Sites web, applications mobiles et logiciels sur mesure pour votre entreprise." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/icons/Logo .png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+  <link rel="stylesheet" href="../../css/variables.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Développement Web, Applications & Logiciels Sur Mesure",
+    "provider": {
+      "@type": "Organization",
+      "name": "DH TECH AGENCY",
+      "url": "https://www.dhtechagency.com"
+    },
+    "areaServed": "Mali, Afrique de l'Ouest"
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       STYLES SPÉCIFIQUES PAGE DÉVELOPPEMENT WEB & MOBILE
+       ============================================================ */
+    
+    /* Hero */
+    .dev-hero {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 40%, #16213e 70%, #0a0a0a 100%);
+      padding: calc(var(--header-height) + 3rem) 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .dev-hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.15), transparent 70%);
+      border-radius: 50%;
+      animation: heroPulse 4s ease-in-out infinite;
+    }
+    
+    @keyframes heroPulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+    
+    /* Cartes de services - Version avancée */
+    .dev-card {
+      position: relative;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      height: 100%;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    
+    .dev-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, var(--color-black) 0%, #1a1a2e 100%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
+    
+    .dev-card:hover::before {
+      opacity: 1;
+    }
+    
+    .dev-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.1) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .dev-card:hover::after {
+      opacity: 1;
+      animation: cardGlow 2s ease-in-out infinite;
+    }
+    
+    @keyframes cardGlow {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(10%, 10%); }
+    }
+    
+    .dev-card-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .dev-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+      border-color: var(--color-orange);
+    }
+    
+    /* Icône animée */
+    .dev-card-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(245, 163, 21, 0.15), rgba(245, 163, 21, 0.05));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .dev-card-icon::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(245, 163, 21, 0.3), transparent);
+      animation: iconRotate 3s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .dev-card:hover .dev-card-icon::before {
+      opacity: 1;
+    }
+    
+    @keyframes iconRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .dev-card:hover .dev-card-icon {
+      background: var(--color-orange);
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 10px 30px rgba(245, 163, 21, 0.4);
+    }
+    
+    .dev-card-icon span {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Titre et texte */
+    .dev-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      transition: color 0.4s ease;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .dev-card:hover h3 {
+      color: var(--color-orange);
+    }
+    
+    .dev-card p {
+      color: var(--color-gray-500);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      transition: color 0.4s ease;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .dev-card:hover p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Liste des fonctionnalités */
+    .dev-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .dev-card ul li {
+      padding: 0.35rem 0;
+      color: var(--color-gray-600);
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .dev-card:hover ul li {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .dev-card ul li::before {
+      content: '▸';
+      color: var(--color-orange);
+      font-weight: 700;
+      transition: transform 0.3s ease;
+    }
+    
+    .dev-card:hover ul li::before {
+      transform: translateX(5px);
+    }
+    
+    /* Lien */
+    .dev-card .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-orange);
+      font-weight: 600;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+    
+    .dev-card:hover .card-link {
+      color: var(--color-white);
+      gap: 0.8rem;
+    }
+    
+    /* Badge */
+    .dev-card-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--color-orange);
+      color: var(--color-black);
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-full);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 3;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.4s ease;
+    }
+    
+    .dev-card:hover .dev-card-badge {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Section technologies */
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: var(--radius-full);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-gray-700);
+      margin: 0.3rem;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    
+    .tech-pill:hover {
+      border-color: var(--color-orange);
+      color: var(--color-orange);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(245, 163, 21, 0.2);
+    }
+    
+    /* Processus de développement */
+    .dev-process-step {
+      position: relative;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    
+    .dev-process-step .step-circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: var(--color-black);
+      border: 3px solid var(--color-orange);
+      color: var(--color-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 1.25rem;
+      position: relative;
+      transition: all 0.4s ease;
+    }
+    
+    .dev-process-step:hover .step-circle {
+      background: var(--color-orange);
+      color: var(--color-black);
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(245, 163, 21, 0.4);
+    }
+    
+    .dev-process-step::after {
+      content: '';
+      position: absolute;
+      top: 35px;
+      right: -50%;
+      width: 100%;
+      height: 2px;
+      background: dashed;
+      border-top: 2px dashed var(--color-gray-300);
+      z-index: 0;
+    }
+    
+    .dev-process-step:last-child::after {
+      display: none;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .dev-card {
+        padding: 2rem 1.5rem;
+      }
+      
+      .dev-card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+      }
+      
+      .dev-process-step::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../../index.html" class="brand" aria-label="DH TECH AGENCY - Accueil">
+          <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto; border-radius: 8px;">
+          <span>DH TECH AGENCY<small>Le digital au service de votre croissance</small></span>
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="../devis.html" class="btn btn-primary btn-sm desktop-cta">Demander un devis</a>
+          <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      
+      <div class="nav-menu-mobile" id="mobileMenu">
+        <ul class="nav-links-mobile">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="../devis.html" class="btn btn-primary btn-block">Demander un devis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="dev-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'ariane">
+        <a href="../../index.html">Accueil</a> <span>/</span>
+        <a href="../services.html">Services</a> <span>/</span>
+        <span>Développement Web &amp; Mobile</span>
+      </nav>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="eyebrow">Service de développement</span>
+          <h1 style="color: var(--color-white); font-size: clamp(2.2rem, 4.5vw, 3.2rem); margin-bottom: 1.25rem; line-height: 1.15;">
+            Développement Web, <span style="color: var(--color-orange);">Applications</span> &amp; Logiciels Sur Mesure
+          </h1>
+          <p style="color: rgba(255, 255, 255, 0.75); font-size: 1.1rem; max-width: 600px; margin-bottom: 2rem;">
+            Des solutions digitales performantes, sécurisées et adaptées à vos besoins spécifiques. 
+            Du site vitrine à l'application mobile en passant par les logiciels métiers.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="../devis.html" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
+            <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20développer%20une%20solution%20digitale." class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">
+              Discuter sur WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div style="font-size: 8rem; animation: heroPulse 3s ease-in-out infinite;">💻</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ===== SECTION CARTES PRINCIPALES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Nos solutions</span>
+          <h2 class="section-title">Ce que nous développons pour vous</h2>
+          <p class="section-sub">Des solutions digitales complètes, du site web au logiciel métier sur mesure.</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Carte 1 : Sites Web -->
+          <div class="col-md-6 col-lg-3">
+            <div class="dev-card">
+              <span class="dev-card-badge">Populaire</span>
+              <div class="dev-card-content">
+                <div class="dev-card-icon"><span>🌐</span></div>
+                <h3>Sites Web Professionnels</h3>
+                <p>Des sites web modernes, rapides et optimisés pour convertir vos visiteurs en clients.</p>
+                <ul>
+                  <li>Sites vitrines &amp; institutionnels</li>
+                  <li>E-commerce &amp; boutiques en ligne</li>
+                  <li>Portails web &amp; intranets</li>
+                  <li>Landing pages optimisées</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 2 : Applications Mobiles -->
+          <div class="col-md-6 col-lg-3">
+            <div class="dev-card">
+              <span class="dev-card-badge">iOS &amp; Android</span>
+              <div class="dev-card-content">
+                <div class="dev-card-icon"><span>📱</span></div>
+                <h3>Applications Mobiles</h3>
+                <p>Des applications mobiles natives et hybrides pour tous les secteurs d'activité.</p>
+                <ul>
+                  <li>Apps iOS &amp; Android</li>
+                  <li>Applications PWA</li>
+                  <li>Apps métiers sur mesure</li>
+                  <li>Intégration paiement mobile</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 3 : Logiciels Sur Mesure -->
+          <div class="col-md-6 col-lg-3">
+            <div class="dev-card">
+              <span class="dev-card-badge">Sur mesure</span>
+              <div class="dev-card-content">
+                <div class="dev-card-icon"><span>⚙️</span></div>
+                <h3>Logiciels Sur Mesure</h3>
+                <p>Des systèmes de gestion personnalisés qui s'adaptent parfaitement à vos processus.</p>
+                <ul>
+                  <li>ERP &amp; systèmes de gestion</li>
+                  <li>CRM &amp; gestion clients</li>
+                  <li>Logiciels de facturation</li>
+                  <li>Tableaux de bord &amp; reporting</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 4 : Maintenance & Support -->
+          <div class="col-md-6 col-lg-3">
+            <div class="dev-card">
+              <span class="dev-card-badge">24/7</span>
+              <div class="dev-card-content">
+                <div class="dev-card-icon"><span>🔧</span></div>
+                <h3>Maintenance &amp; Support</h3>
+                <p>Un accompagnement technique continu pour garantir la performance de vos solutions.</p>
+                <ul>
+                  <li>Maintenance préventive</li>
+                  <li>Mises à jour &amp; correctifs</li>
+                  <li>Sécurité &amp; sauvegardes</li>
+                  <li>Support technique dédié</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION TECHNOLOGIES ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Technologies</span>
+          <h2 class="section-title">Nos technologies de prédilection</h2>
+          <p class="section-sub">Nous utilisons les technologies les plus performantes et les plus adaptées à votre projet.</p>
+        </div>
+        <div class="text-center">
+          <span class="tech-pill">⚛️ React</span>
+          <span class="tech-pill">🟢 Node.js</span>
+          <span class="tech-pill">🐘 PHP</span>
+          <span class="tech-pill">🐍 Python</span>
+          <span class="tech-pill">📱 React Native</span>
+          <span class="tech-pill">🎯 Flutter</span>
+          <span class="tech-pill">🗄️ MySQL</span>
+          <span class="tech-pill">🍃 MongoDB</span>
+          <span class="tech-pill">🔷 Bootstrap</span>
+          <span class="tech-pill">🎨 Tailwind CSS</span>
+          <span class="tech-pill">☁️ AWS</span>
+          <span class="tech-pill">🐳 Docker</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION PROCESSUS ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Notre processus</span>
+          <h2 class="section-title">Comment nous développons votre projet</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="dev-process-step">
+              <div class="step-circle">1</div>
+              <h3>Analyse</h3>
+              <p class="text-muted">Compréhension de vos besoins et définition des objectifs.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="dev-process-step">
+              <div class="step-circle">2</div>
+              <h3>Conception</h3>
+              <p class="text-muted">Maquettes, architecture et design de votre solution.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="dev-process-step">
+              <div class="step-circle">3</div>
+              <h3>Développement</h3>
+              <p class="text-muted">Code propre, tests et déploiement progressif.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="dev-process-step">
+              <div class="step-circle">4</div>
+              <h3>Lancement</h3>
+              <p class="text-muted">Mise en production, formation et support continu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION POURQUOI NOUS CHOISIR ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="eyebrow">Pourquoi nous choisir ?</span>
+            <h2 class="section-title">L'excellence technique au service de votre croissance</h2>
+            <ul class="check-list mt-4">
+              <li><strong>Code de qualité</strong> — Standards professionnels et bonnes pratiques</li>
+              <li><strong>Performance optimale</strong> — Sites rapides et applications fluides</li>
+              <li><strong>Sécurité renforcée</strong> — Protection des données et conformité</li>
+              <li><strong>SEO intégré</strong> — Référencement naturel dès la conception</li>
+              <li><strong>Responsive design</strong> — Adapté à tous les écrans</li>
+              <li><strong>Support continu</strong> — Accompagnement après le lancement</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 rounded-4 shadow" style="background: var(--color-white); border: 2px solid var(--color-orange);">
+              <h3 class="mb-4 text-center">💡 Types de projets réalisés</h3>
+              <ul class="check-list">
+                <li>Site e-commerce avec paiement mobile</li>
+                <li>Application de gestion de stock</li>
+                <li>Plateforme de réservation en ligne</li>
+                <li>Système de facturation automatisé</li>
+                <li>Application de livraison</li>
+                <li>Portail client avec espace sécurisé</li>
+                <li>CRM personnalisé pour PME</li>
+                <li>Application de gestion scolaire</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="../devis.html" class="btn btn-primary btn-lg">Démarrer mon projet</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION CTA ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-band">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2>Prêt à développer votre solution digitale ?</h2>
+              <p>Contactez-nous et obtenez un devis gratuit sous 48h.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="../devis.html" class="btn btn-dark btn-lg">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand-logo">
+            <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto;">
+            <div class="brand-text">
+              DH TECH AGENCY
+              <small>Le digital au service de votre croissance</small>
+            </div>
+          </div>
+          <p class="mb-3" style="font-size:0.92rem">Agence de transformation digitale et centre de formation numérique.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="https://wa.me/22369023957" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+            <a href="#" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="marketing-digital.html">Marketing digital</a></li>
+            <li><a href="communication-digitale.html">Communication digitale</a></li>
+            <li><a href="reseaux-sociaux.html">Réseaux sociaux</a></li>
+            <li><a href="branding-identite-visuelle.html">Branding</a></li>
+            <li><a href="creation-sites-web.html" class="active">Développement web</a></li>
+            <li><a href="../services.html">Tous les services</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="../a-propos.html">À propos</a></li>
+            <li><a href="../equipe.html">Équipe</a></li>
+            <li><a href="../realisations.html">Réalisations</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4">
+          <h4>Contact</h4>
+          <ul>
+            <li>Bamako, Mali</li>
+            <li><a href="tel:+22369023957">+223 69-02-39-57</a></li>
+            <li><a href="https://wa.me/22369023957" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contact@dhtechagency.com">contact@dhtechagency.com</a></li>
+            <li><a href="../devis.html">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2025</span> DH TECH AGENCY. Tous droits réservés.</span>
+        <span>Le digital au service de votre croissance</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20développer%20une%20solution%20digitale." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/analytics.js"></script>
+</body>
+</html>

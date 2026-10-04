@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Réalisations | DH TECH AGENCY</title>
+  <meta name="description" content="Découvrez nos réalisations : sites web, applications, campagnes marketing et projets réussis par DH TECH AGENCY." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="apple-touch-icon" href="../assets/icons/Logo .png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/variables.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../index.html" class="brand" aria-label="DH TECH AGENCY - Accueil">
+          <img src="../assets/logos/Logo .png" alt="DH TECH AGENCY">
+          <span>DH TECH AGENC'Y<small>Le digital au service de votre croissance</small></span>
+        </a>
+        
+        <!-- Menu desktop -->
+        <ul class="nav-links">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html" class="active">Réalisations</a></li>
+          <li><a href="etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="devis.html" class="btn btn-primary btn-sm desktop-cta">Demander un devis</a>
+          <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      
+      <!-- Menu mobile -->
+      <div class="nav-menu-mobile" id="mobileMenu">
+        <ul class="nav-links-mobile">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html" class="active">Réalisations</a></li>
+          <li><a href="etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="devis.html" class="btn btn-primary btn-block">Demander un devis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span>/</span>
+        <span>Réalisations</span>
+      </div>
+      <span class="eyebrow">Nos réalisations</span>
+      <h1>Des projets qui font la différence</h1>
+      <p>Découvrez une sélection de nos projets réussis et l'impact qu'ils ont eu pour nos clients.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTENU PRINCIPAL ===== -->
+  <main>
+
+    <!-- ===== SECTION RÉALISATIONS ===== -->
+    <section class="py-5">
+      <div class="container">
+        
+        <!-- Filtres -->
+        <div class="text-center mb-5">
+          <div class="btn-group" role="group" aria-label="Filtres réalisations">
+            <button type="button" class="btn btn-dark active" data-filter="all">Tous</button>
+            <button type="button" class="btn btn-outline-dark" data-filter="web">Sites Web</button>
+            <button type="button" class="btn btn-outline-dark" data-filter="marketing">Marketing</button>
+            <button type="button" class="btn btn-outline-dark" data-filter="ia">IA & Automatisation</button>
+            <button type="button" class="btn btn-outline-dark" data-filter="design">Design</button>
+          </div>
+        </div>
+
+        <!-- Grille des réalisations -->
+        <div class="row g-4" id="realisations-grid">
+          
+          <!-- Réalisation 1 -->
+          <div class="col-md-6 col-lg-4 realisation-item" data-category="web">
+            <div class="card h-100 border-0 shadow-sm realisation-card">
+              <div class="position-relative">
+                <img src="../assets/images/maria-shop.png" alt="Site e-commerce - Maria-shop" class="card-img-top" style="height: 250px; object-fit: cover;" />
+                <span class="badge bg-dark position-absolute top-0 end-0 m-3">Site Web</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5">Maria-shop</h3>
+                <p class="card-text text-muted">Plateforme e-commerce complète avec paiement mobile intégré pour une boutique de vêtements marque africaine à Bamako.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">+250% de ventes</span>
+                  <a href="https://www.mariashop.ml" class="btn btn-sm btn-outline-dark">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réalisation 2 -->
+          <div class="col-md-6 col-lg-4 realisation-item" data-category="marketing">
+            <div class="card h-100 border-0 shadow-sm realisation-card">
+              <div class="position-relative">
+                <img src="../assets/clients/Adaservice.png" alt="Campagne social media - Agence Tourisme Mali" class="card-img-top" style="height: 250px; object-fit: cover;" />
+                <span class="badge bg-dark position-absolute top-0 end-0 m-3">Marketing</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5"> Oui Grossiste : ADASERVICE</h3>
+                <p class="card-text text-muted">Campagne social media complète : Facebook, Instagram et TikTok. +50K abonnés en 6 mois.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">+50K abonnés</span>
+                  <a href="realisations/campagne-social-media.html" class="btn btn-sm btn-outline-dark">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réalisation 3 -->
+          <div class="col-md-6 col-lg-4 realisation-item" data-category="web">
+            <div class="card h-100 border-0 shadow-sm realisation-card">
+              <div class="position-relative">
+                <img src="../assets/images/royal-boubou.png" alt="Site e-commerce - royal-boubou" class="card-img-top" style="height: 250px; object-fit: cover;" />
+                <span class="badge bg-dark position-absolute top-0 end-0 m-3">Site Web</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5">Royal Boubou</h3>
+                <p class="card-text text-muted">Boutique en ligne de vêtements à Bamako avec paiement mobile intégré.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">+170% de ventes</span>
+                  <a href="https://www.royalboubou.com" class="btn btn-sm btn-outline-dark">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réalisation 4 -->
+          <div class="col-md-6 col-lg-4 realisation-item" data-category="web">
+            <div class="card h-100 border-0 shadow-sm realisation-card">
+              <div class="position-relative">
+                <img src="../assets/images/somdia.png" alt="Site e-commerce - Somdia" class="card-img-top" style="height: 250px; object-fit: cover;" />
+                <span class="badge bg-dark position-absolute top-0 end-0 m-3">Site Web</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5">Somdia</h3>
+                <p class="card-text text-muted">Acteur incontournable dans la production et la commercialisation de sucre et de farines, le Groupe poursuit son développement et sa diversification.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">+250% de ventes</span>
+                  <a href="https://www.groupe-somdia.com" class="btn btn-sm btn-outline-dark">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réalisation 5 -->
+          <div class="col-md-6 col-lg-4 realisation-item" data-category="web">
+            <div class="card h-100 border-0 shadow-sm realisation-card">
+              <div class="position-relative">
+                <img src="../assets/images/ajftpe.jpeg" alt="Site institutionnel - ONG Développement" class="card-img-top" style="height: 250px; object-fit: cover;" />
+                <span class="badge bg-dark position-absolute top-0 end-0 m-3">Site Web</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5">Site web pour Association</h3>
+                <p class="card-text text-muted">Site web vitrine pour une association des jeunes femmes pour la préservation de l'Envirinnement et lutte contre la déforestation.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">+120% de dons</span>
+                  <a href="https://www.ajftpe.org" class="btn btn-sm btn-outline-dark">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réalisation 6 -->
+          <div class="col-md-6 col-lg-4 realisation-item" data-category="marketing">
+            <div class="card h-100 border-0 shadow-sm realisation-card">
+              <div class="position-relative">
+                <img src="../assets/images/logo-garage.jpeg" alt="SEO - Cabinet Conseil" class="card-img-top" style="height: 250px; object-fit: cover;" />
+                <span class="badge bg-dark position-absolute top-0 end-0 m-3">Marketing</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5">Garage moderne auto-mobile</h3>
+                <p class="card-text text-muted">Accompagnement de l'entreprise dans la modernisation de son garage et l'amélioration de son image de marque.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">Bonne E-reputation</span>
+                  <a href="realisations/seo-optimisation.html" class="btn btn-sm btn-outline-dark">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réalisation 7 -->
+          <div class="col-md-6 col-lg-4 realisation-item" data-category="web">
+            <div class="card h-100 border-0 shadow-sm realisation-card">
+              <div class="position-relative">
+                <img src="../assets/images/sarova.png" alt="Site e-commerce - sarovahotel" class="card-img-top" style="height: 250px; object-fit: cover;" />
+                <span class="badge bg-dark position-absolute top-0 end-0 m-3">Site Web</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5">Sarova Hotel</h3>
+                <p class="card-text text-muted">Savova Hotel est un groupe hotélier kanyanne d'amitié et de volonté, unies pour créer des hôtels et complexes hôteliers d'exception, indépendants et leaders au Kenya</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">+55 certifications</span>
+                  <a href="https://www.sarovahotels.com" class="btn btn-sm btn-outline-dark">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réalisation 8 -->
+          <div class="col-md-6 col-lg-4 realisation-item" data-category="design">
+            <div class="card h-100 border-0 shadow-sm realisation-card">
+              <div class="position-relative">
+                <img src="../assets/images/logo-thiam.png" alt="Branding - Entreprise-commercial" class="card-img-top" style="height: 250px; object-fit: cover;" />
+                <span class="badge bg-dark position-absolute top-0 end-0 m-3">Design</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5">Entreprise commercial</h3>
+                <p class="card-text text-muted">Refonte complète du branding et de l'identité visuelle de l'entreprise.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">+100 clients/jour</span>
+                  <a href="realisations/branding-entreprise.html" class="btn btn-sm btn-outline-dark">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réalisation 9 -->
+          <div class="col-md-6 col-lg-4 realisation-item" data-category="web">
+            <div class="card h-100 border-0 shadow-sm realisation-card">
+              <div class="position-relative">
+                <img src="../assets/images/realisations/application-mobile.jpg" alt="Application mobile - Santé Plus" class="card-img-top" style="height: 250px; object-fit: cover;" />
+                <span class="badge bg-dark position-absolute top-0 end-0 m-3">Site Web</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5">Application Santé Plus</h3>
+                <p class="card-text text-muted">Développement d'une application web de prise de rendez-vous médicaux avec suivi en ligne.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">+10K utilisateurs</span>
+                  <a href="realisations/application-mobile.html" class="btn btn-sm btn-outline-dark">Voir le projet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION STATISTIQUES ===== -->
+    <section class="py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md-3">
+            <h2 class="display-4 fw-bold" data-counter="150">150+</h2>
+            <p class="text-muted">Projets réalisés</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="display-4 fw-bold" data-counter="80">80+</h2>
+            <p class="text-muted">Clients satisfaits</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="display-4 fw-bold" data-counter="5">5+</h2>
+            <p class="text-muted">Années d'expérience</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="display-4 fw-bold" data-counter="98">98%</h2>
+            <p class="text-muted">Taux de satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION TEMOIGNAGES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Témoignages</span>
+          <h2 class="section-title">Ce que disent nos clients</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+              <div class="text-warning mb-3">★★★★★</div>
+              <p class="card-text">"DH TECH AGENCY a transformé notre présence en ligne. Notre site est magnifique et nous avons doublé nos ventes en ligne."</p>
+              <div class="d-flex align-items-center mt-3">
+                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">MT</div>
+                <div>
+                  <strong>Makan DIALLO</strong>
+                  <br><small class="text-muted">Commerçant, Boutique Moderne</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+              <div class="text-warning mb-3">★★★★★</div>
+              <p class="card-text">"Le chatbot IA déployé par DH TECH AGENCY a révolutionné notre service client. Nos clients sont plus satisfaits que jamais."</p>
+              <div class="d-flex align-items-center mt-3">
+                <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">AK</div>
+                <div>
+                  <strong>Aminata Keita</strong>
+                  <br><small class="text-muted">Responsable Digital, innov Sahélienne</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+              <div class="text-warning mb-3">★★★★★</div>
+              <p class="card-text">"Une équipe professionnelle, créative et à l'écoute. Leur stratégie marketing a propulsé notre marque sur les réseaux sociaux."</p>
+              <div class="d-flex align-items-center mt-3">
+                <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">SD</div>
+                <div>
+                  <strong>Ahmed Ag Idwal</strong>
+                  <br><small class="text-muted">Fondateur, Agence Tourisme Mali</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION CTA ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="cta-band">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2>Envie de voir votre projet ici ?</h2>
+              <p>Rejoignez nos clients satisfaits et faites décoller votre entreprise avec DH TECH AGENCY.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="devis.html" class="btn btn-dark btn-lg">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER AVEC LOGO ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand-logo">
+            <img src="../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height:40px; width:auto;">
+            <div class="brand-text">
+              DH TECH AGENCY
+              <small>Le digital au service de votre croissance</small>
+            </div>
+          </div>
+          <p class="mb-3" style="font-size:0.92rem">Agence de transformation digitale et centre de formation numérique. Le digital au service de votre croissance.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1 .3-1.7 1.8-1.7H17V2.2c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v4h3v8z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.6 4.75 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+            <a href="https://wa.me/22369023957" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services/marketing-digital.html">Marketing digital</a></li>
+            <li><a href="services/creation-site-web.html">Création de sites</a></li>
+            <li><a href="services/automatisation-ia.html">IA &amp; Automatisation</a></li>
+            <li><a href="services/formations.html">Formations</a></li>
+            <li><a href="services.html">Tous les services</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="equipe.html">Équipe</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4">
+          <h4>Contact</h4>
+          <ul>
+            <li>Bamako, Mali</li>
+            <li><a href="tel:+22369023957">+223 69-02-39-57</a></li>
+            <li><a href="tel:+22370191624">+223 70-19-16-24</a></li>
+            <li><a href="https://wa.me/22369023957" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contact@dhtechagency.com">contact@dhtechagency.com</a></li>
+            <li><a href="contact.html">Nous contacter</a></li>
+            <li><a href="devis.html">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2025</span> DH TECH AGENCY. Tous droits réservés.</span>
+        <span>Le digital au service de votre croissance</span>
+        <span>
+          <a href="mentions-legales.html">Mentions légales</a> ·
+          <a href="politique-confidentialite.html">Confidentialité</a> ·
+          <a href="cgu.html">CGU</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20discuter%20de%20mon%20projet." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    // Script de filtrage des réalisations
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('[data-filter]');
+      const realisationItems = document.querySelectorAll('.realisation-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Retirer la classe active de tous les boutons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = this.getAttribute('data-filter');
+
+          realisationItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Script pour les compteurs
+      const counters = document.querySelectorAll('[data-counter]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.getAttribute('data-counter'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              counter.textContent = Math.floor(current) + '+';
+            }, 16);
+
+            observer.unobserve(counter);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(counter => observer.observe(counter));
+    });
+  </script>
+</body>
+</html>

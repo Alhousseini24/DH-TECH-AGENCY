@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05050a"/>
+      <stop offset="0.6" stop-color="#0c0c16"/>
+      <stop offset="1" stop-color="#140f04"/>
+    </linearGradient>
+    <linearGradient id="bar5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5a315"/>
+      <stop offset="1" stop-color="#b06e00"/>
+    </linearGradient>
+    <radialGradient id="glow5" cx="0.8" cy="0.25" r="0.6">
+      <stop offset="0" stop-color="#f5a315" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#f5a315" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg5)"/>
+  <rect width="1600" height="900" fill="url(#glow5)"/>
+  <!-- grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="150" x2="1600" y2="150"/><line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="450" x2="1600" y2="450"/><line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="750" x2="1600" y2="750"/>
+    <line x1="200" y1="0" x2="200" y2="900"/><line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/><line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/><line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1400" y1="0" x2="1400" y2="900"/>
+  </g>
+  <!-- dashboard card -->
+  <g transform="translate(980,120)">
+    <rect width="520" height="460" rx="18" fill="#0d0d12" stroke="#f5a315" stroke-opacity="0.4" stroke-width="2"/>
+    <rect x="14" y="14" width="492" height="52" rx="10" fill="#05050a"/>
+    <circle cx="34" cy="40" r="6" fill="#f5a315"/>
+    <circle cx="54" cy="40" r="6" fill="#f5a315" fill-opacity="0.6"/>
+    <circle cx="74" cy="40" r="6" fill="#f5a315" fill-opacity="0.3"/>
+    <rect x="24" y="90" width="120" height="14" rx="7" fill="url(#bar5)"/>
+    <!-- bar chart -->
+    <rect x="24" y="150" width="40" height="90" rx="6" fill="#f5a315" fill-opacity="0.25"/>
+    <rect x="74" y="120" width="40" height="120" rx="6" fill="#f5a315" fill-opacity="0.5"/>
+    <rect x="124" y="90" width="40" height="150" rx="6" fill="#f5a315" fill-opacity="0.75"/>
+    <rect x="174" y="60" width="40" height="180" rx="6" fill="url(#bar5)"/>
+    <rect x="224" y="40" width="40" height="200" rx="6" fill="#ffb52e"/>
+    <!-- line chart -->
+    <g fill="none" stroke="#f5a315" stroke-width="3">
+      <path d="M300 230 L360 190 L420 205 L480 150 L520 160 L560 110"/>
+    </g>
+    <g fill="#f5a315">
+      <circle cx="300" cy="230" r="5"/><circle cx="360" cy="190" r="5"/>
+      <circle cx="420" cy="205" r="5"/><circle cx="480" cy="150" r="5"/>
+      <circle cx="520" cy="160" r="5"/><circle cx="560" cy="110" r="5"/>
+    </g>
+    <rect x="24" y="300" width="472" height="12" rx="6" fill="#ffffff" fill-opacity="0.1"/>
+    <rect x="24" y="325" width="320" height="12" rx="6" fill="#ffffff" fill-opacity="0.07"/>
+    <rect x="24" y="400" width="180" height="14" rx="7" fill="url(#bar5)"/>
+  </g>
+  <!-- floating growth arrow -->
+  <g stroke="#f5a315" stroke-opacity="0.6" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M180 600 L280 500 L360 520 L480 380"/>
+  </g>
+  <polygon points="480,380 450,382 470,404" fill="#f5a315"/>
+  <circle cx="180" cy="600" r="120" fill="none" stroke="#f5a315" stroke-opacity="0.12" stroke-width="2"/>
+  <text x="1500" y="760" font-family="monospace" font-size="16" fill="#f5a315" fill-opacity="0.5">DATA</text>
+</svg>

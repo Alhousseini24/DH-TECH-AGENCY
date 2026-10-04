@@ -1,0 +1,344 @@
+/* ============================================================
+   DH TECH AGENCY — Responsive Styles
+   Toutes les règles responsive du site sont regroupées ici.
+   Approche mobile-first : on part du mobile et on améliore
+   progressivement la mise en page pour les écrans plus larges.
+   ============================================================ */
+
+/* ============================================================
+   1. TRÈS PETITS ÉCRANS (< 400px)
+   Mini smartphones / anciens téléphones
+   ============================================================ */
+@media (max-width: 399px) {
+  .container { padding: 0 0.9rem; }
+
+  /* Navigation */
+  .brand { font-size: 1rem; gap: 0.45rem; }
+  .brand-logo { width: 34px; height: 34px; font-size: 0.9rem; }
+  .brand small { font-size: 0.55rem; }
+  .nav-cta .btn-primary { padding: 0.55rem 0.9rem; font-size: 0.8rem; }
+  .nav-toggle { width: 38px; height: 38px; }
+
+  /* Typographie */
+  h1 { font-size: 1.7rem !important; }
+  .section-title { font-size: 1.5rem !important; }
+  .hero h1 { font-size: 1.8rem !important; }
+  .hero p { font-size: 0.98rem !important; }
+  .page-hero h1 { font-size: 1.7rem !important; }
+
+  /* Boutons */
+  .btn { padding: 0.75rem 1.25rem; }
+
+  /* Statistiques */
+  .stat-num { font-size: 1.7rem; }
+  .stat-label { font-size: 0.78rem; }
+
+  /* Cartes */
+  .service-card, .testimonial, .contact-card { padding: 1.4rem 1.1rem; }
+  .method-step { padding: 1.4rem 1.1rem; }
+
+  /* CTA */
+  .cta-band { padding: 2rem 1.25rem; }
+
+  /* Footer */
+  .site-footer { padding: 3rem 0 1.5rem; }
+
+  /* WhatsApp flottant */
+  .whatsapp-float { width: 50px; height: 50px; bottom: 1rem; right: 1rem; }
+}
+
+/* ============================================================
+   2. PETITS MOBILES (400px – 575px)
+   ============================================================ */
+@media (min-width: 400px) and (max-width: 575px) {
+  .container { padding: 0 1rem; }
+
+  .section-title { font-size: 1.6rem !important; }
+  .stat-num { font-size: 1.9rem; }
+}
+
+/* ============================================================
+   3. MOBILES (≤ 575px)
+   ============================================================ */
+@media (max-width: 575px) {
+  section { padding: 3.5rem 0; }
+
+  /* Espacement vertical des sections internes */
+  .row.g-5 { --bs-gutter-y: 2.5rem; }
+
+  /* Titres */
+  .section-title { margin-bottom: 0.75rem; }
+  .section-sub { font-size: 0.98rem; }
+
+/* Hero */
+  .hero { padding-top: calc(var(--header-height) + 2.5rem); padding-bottom: 4.5rem; }
+  .hero-content { max-width: 100%; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+  .hero-badge { font-size: 0.76rem; padding: 0.4rem 0.85rem; }
+  .scroll-hint { display: none; }
+  .hero-arrow { display: none; }
+  .hero-dots { bottom: 2rem; }
+
+  /* Stats */
+  .stat-item { padding: 1.5rem 0.5rem; }
+  .stat-num { font-size: 2rem; }
+
+  /* Grilles simples passe en une colonne confortable */
+  .method-step .num { font-size: 2rem; }
+
+  /* Cartes */
+  .service-card { padding: 1.6rem 1.4rem; }
+  .testimonial { padding: 1.6rem; }
+  .contact-card { padding: 1.4rem; }
+
+  /* CTA */
+  .cta-band { padding: 2.25rem 1.5rem; text-align: center; }
+  .cta-band .btn { margin-top: 1rem; width: 100%; }
+
+  /* Footer */
+  .footer-bottom { flex-direction: column; text-align: center; gap: 0.75rem; }
+  .site-footer .col-6 { flex: 0 0 50%; max-width: 50%; }
+
+  /* Boutons */
+  .btn-lg { width: 100%; }
+
+  /* Breadcrumb */
+  .breadcrumb { flex-wrap: wrap; row-gap: 0.25rem; }
+
+  /* FAQ */
+  .faq-q { padding: 1rem 1rem; font-size: 0.95rem; gap: 0.75rem; }
+  .faq-a-inner { padding: 0 1rem 1rem; }
+}
+
+/* ============================================================
+   4. PETITES TABLETTES (576px – 767px)
+   ============================================================ */
+@media (min-width: 576px) and (max-width: 767px) {
+  .hero-actions .btn { padding: 0.9rem 1.6rem; }
+  .cta-band { text-align: center; }
+  .cta-band .btn { margin-top: 1rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+/* ============================================================
+   5. TABLETTES (≤ 767px) — réglages transverses
+   ============================================================ */
+@media (max-width: 767px) {
+  .cta-band { text-align: center; }
+  .cta-band .btn { margin-top: 1rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  /* Aligner les blocs texte/visuel en colonne */
+  .row.align-items-center > [class*="col-"] { text-align: center; }
+  .bg-dark .check-list { text-align: left; display: inline-block; }
+  .check-list { text-align: left; }
+
+  /* Réduire l'écart vertical des sections */
+  section { padding: 3.75rem 0; }
+  .page-hero { padding: calc(var(--header-height) + 3rem) 0 3rem; }
+}
+
+/* ============================================================
+   6. TABLETTES PORTRAIT (≤ 991px)
+   Navigation mobile + ajustements
+   ============================================================ */
+@media (max-width: 991px) {
+  /* Hero */
+  .hero { min-height: auto; padding-top: calc(var(--header-height) + 3rem); padding-bottom: 4rem; }
+
+  /* CTA */
+  .cta-band { padding: 2.5rem 1.75rem; }
+
+  /* Typographie des sections */
+  section { padding: 4rem 0; }
+}
+
+/* ===== SERVICES - IMAGES 190x190 CENTRÉES ===== */
+
+/* Centrer tout le contenu de la carte */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Conteneur de l'image */
+.service-card .icon-wrap {
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 1.5rem; /* Centré horizontalement + marge basse */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(245, 163, 21, 0.10);
+  border-radius: var(--radius-md);
+}
+
+/* Image elle-même */
+.service-card .icon-wrap img {
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  .service-card .icon-wrap,
+  .service-card .icon-wrap img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card .icon-wrap,
+  .service-card .icon-wrap img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Mobile - ajustement */
+@media (max-width: 576px) {
+  .service-card .icon-wrap {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .service-card .icon-wrap img {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .service-card .icon-wrap {
+    width: 80px;
+    height: 80px;
+  }
+  .service-card .icon-wrap img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Style alternatif */
+  .service-card .card-image {
+    height: 180px;
+  }
+}
+
+/* Tablette */
+@media (max-width: 768px) {
+  .service-card .icon-wrap {
+    width: 90px;
+    height: 90px;
+  }
+  .service-card .icon-wrap img {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* Desktop large */
+@media (min-width: 1200px) {
+  .service-card .icon-wrap {
+    width: 120px;
+    height: 120px;
+  }
+  .service-card .icon-wrap img {
+    width: 90px;
+    height: 90px;
+  }
+  
+  /* Style alternatif */
+  .service-card .card-image {
+    height: 240px;
+  }
+}
+
+/* Tablette */
+@media (min-width: 576px) and (max-width: 992px) {
+  .service-card .icon-wrap {
+    width: 72px;
+    height: 72px;
+  }
+  
+  .service-card .icon-wrap img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ============================================================
+   7. LARGE / PAYSAGE TABLETTE (≤ 1199px)
+   ============================================================ */
+@media (max-width: 1199px) {
+  /* Bouton hamburger */
+  .nav-toggle { display: flex; flex-direction: column; }
+
+  /* Menu déroulant mobile */
+  .nav-links {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(5, 5, 5, 0.98);
+    padding: 1rem 1.25rem 1.5rem;
+    gap: 0.25rem;
+    transform: translateY(-130%);
+    transition: var(--transition);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    visibility: hidden;
+    opacity: 0;
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    z-index: 1001;
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+  .nav-links a {
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+    display: block;
+  }
+}
+
+/* ============================================================
+   8. TRÈS GRANDS ÉCRANS (≥ 1400px)
+   ============================================================ */
+@media (min-width: 1400px) {
+  .hero { min-height: 92vh; }
+  .container { max-width: 1320px; }
+}
+
+/* ============================================================
+   9. ACCESSIBILITÉ — mouvement réduit
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+  .nav-links { transition: none; }
+
+  /* Hero : aucune animation ; seule la première slide reste visible */
+  .hero-slide { transition: none !important; opacity: 0; transform: none; }
+  .hero-slide.active { opacity: 1; }
+  .hero-slide:not(.active) { display: none; }
+  .hero-anim { opacity: 1 !important; animation: none !important; }
+  .hero-arrow, .hero-dot { transition: none; }
+  .scroll-hint::after { animation: none; }
+}

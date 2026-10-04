@@ -1,0 +1,878 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#f5a315" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation, Conseil & Accompagnement | DH TECH ACADEMY | DH TECH AGENCY</title>
+  <meta name="description" content="Formations professionnelles en marketing digital, développement web, IA et bureautique. Coaching, mentorat et accompagnement à la transformation digitale." />
+  <meta name="keywords" content="formation digitale Mali, formation marketing Bamako, coaching entreprise, accompagnement digital, bootcamp web, DH TECH AGENCY" />
+  <meta name="author" content="DH TECH AGENCY" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dhtechagency.com/pages/services/formation-accompagnement.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="DH TECH AGENCY" />
+  <meta property="og:title" content="Formation, Conseil & Accompagnement | DH TECH AGENCY" />
+  <meta property="og:description" content="Formations professionnelles, coaching et accompagnement à la transformation digitale." />
+  <meta property="og:url" content="https://www.dhtechagency.com/pages/services/formation-accompagnement.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/icons/Logo .png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+  <link rel="stylesheet" href="../../css/variables.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
+
+  <style>
+    /* ============================================================
+       STYLES SPÉCIFIQUES PAGE FORMATION, CONSEIL & ACCOMPAGNEMENT
+       ============================================================ */
+    
+    /* Hero */
+    .formation-hero {
+      background: linear-gradient(135deg, #0a0a0a 0%, #0a1a0a 30%, #1a2a0a 60%, #0a0a0a 100%);
+      padding: calc(var(--header-height) + 3rem) 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .formation-hero::before {
+      content: '';
+      position: absolute;
+      top: -35%;
+      left: -15%;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.15), transparent 70%);
+      border-radius: 50%;
+      animation: formationPulse 5s ease-in-out infinite;
+    }
+    
+    .formation-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -25%;
+      right: -10%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.1), transparent 70%);
+      border-radius: 50%;
+      animation: formationPulse 4s ease-in-out infinite reverse;
+    }
+    
+    @keyframes formationPulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+    
+    /* Cartes formation animées */
+    .formation-card {
+      position: relative;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      height: 100%;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    
+    .formation-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #0a0a0a 0%, #0a1a0a 50%, #1a2a0a 100%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
+    
+    .formation-card:hover::before {
+      opacity: 1;
+    }
+    
+    .formation-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 40% 60%, rgba(245, 163, 21, 0.1) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .formation-card:hover::after {
+      opacity: 1;
+      animation: formationGlow 4s ease-in-out infinite;
+    }
+    
+    @keyframes formationGlow {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(4%, -4%) scale(1.05); }
+      50% { transform: translate(-4%, 4%) scale(1.1); }
+      75% { transform: translate(4%, 4%) scale(1.05); }
+    }
+    
+    .formation-card-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .formation-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+      border-color: var(--color-orange);
+    }
+    
+    /* Icône animée */
+    .formation-icon {
+      width: 85px;
+      height: 85px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, rgba(245, 163, 21, 0.15), rgba(245, 163, 21, 0.05));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .formation-icon::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 0deg, transparent, rgba(245, 163, 21, 0.4), transparent, rgba(245, 163, 21, 0.4), transparent);
+      animation: formationIconSpin 3s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .formation-card:hover .formation-icon::before {
+      opacity: 1;
+    }
+    
+    @keyframes formationIconSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .formation-icon span {
+      position: relative;
+      z-index: 2;
+      transition: all 0.5s ease;
+    }
+    
+    .formation-card:hover .formation-icon {
+      background: var(--color-orange);
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 15px 40px rgba(245, 163, 21, 0.5);
+      border-radius: 50%;
+    }
+    
+    .formation-card:hover .formation-icon span {
+      transform: scale(1.3) rotate(5deg);
+    }
+    
+    /* Titre */
+    .formation-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.4s ease;
+    }
+    
+    .formation-card:hover h3 {
+      color: var(--color-orange);
+      transform: translateX(5px);
+    }
+    
+    .formation-card p {
+      color: var(--color-gray-500);
+      font-size: 0.93rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      transition: color 0.4s ease;
+    }
+    
+    .formation-card:hover p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    
+    /* Liste */
+    .formation-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    
+    .formation-card ul li {
+      padding: 0.4rem 0;
+      color: var(--color-gray-600);
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.3s ease;
+    }
+    
+    .formation-card:hover ul li {
+      color: rgba(255, 255, 255, 0.7);
+      transform: translateX(8px);
+    }
+    
+    .formation-card ul li::before {
+      content: '🎓';
+      font-size: 0.75rem;
+      transition: all 0.3s ease;
+    }
+    
+    .formation-card:hover ul li::before {
+      transform: scale(1.4) rotate(15deg);
+    }
+    
+    /* Badge */
+    .formation-badge {
+      position: absolute;
+      top: 20px;
+      right: -30px;
+      background: var(--color-orange);
+      color: var(--color-black);
+      padding: 0.4rem 2rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 3;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    
+    .formation-card:hover .formation-badge {
+      opacity: 1;
+      right: -20px;
+    }
+    
+    /* Cartes de programmes */
+    .program-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      height: 100%;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      overflow: hidden;
+      background: var(--color-white);
+      border: 2px solid var(--color-gray-200);
+    }
+    
+    .program-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--program-color);
+      opacity: 0.05;
+      transition: opacity 0.4s ease;
+    }
+    
+    .program-card:hover::before {
+      opacity: 0.2;
+    }
+    
+    .program-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      border-color: var(--program-color);
+    }
+    
+    .program-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      transition: all 0.5s ease;
+    }
+    
+    .program-card:hover .program-icon {
+      transform: scale(1.3) rotate(10deg);
+    }
+    
+    .program-duration {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      background: var(--program-color);
+      color: var(--color-white);
+    }
+    
+    /* Couleurs programmes */
+    .program-marketing { --program-color: #1877f2; }
+    .program-web { --program-color: #e44d26; }
+    .program-ia { --program-color: #8b5cf6; }
+    .program-bureautique { --program-color: #10b981; }
+    .program-design { --program-color: #ec4899; }
+    .program-coaching { --program-color: #f59e0b; }
+    
+    /* Statistiques */
+    .formation-stat {
+      text-align: center;
+      padding: 2rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .formation-stat::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background: var(--color-orange);
+      transition: width 0.4s ease;
+    }
+    
+    .formation-stat:hover::before {
+      width: 100%;
+    }
+    
+    .formation-stat:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      border-color: var(--color-orange);
+    }
+    
+    .formation-stat .stat-value {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--color-orange);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      transition: transform 0.4s ease;
+    }
+    
+    .formation-stat:hover .stat-value {
+      transform: scale(1.2);
+    }
+    
+    /* Processus */
+    .formation-process-step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    
+    .formation-process-step .step-circle {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: var(--color-black);
+      border: 3px solid var(--color-orange);
+      color: var(--color-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 1.25rem;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .formation-process-step:hover .step-circle {
+      background: var(--color-orange);
+      color: var(--color-black);
+      transform: scale(1.15) rotate(360deg);
+      box-shadow: 0 0 0 12px rgba(245, 163, 21, 0.1);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .formation-card {
+        padding: 2rem 1.5rem;
+      }
+      
+      .formation-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 2.2rem;
+      }
+      
+      .formation-stat .stat-value {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../../index.html" class="brand" aria-label="DH TECH AGENCY - Accueil">
+          <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto; border-radius: 8px;">
+          <span>DH TECH AGENCY<small>Le digital au service de votre croissance</small></span>
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="../devis.html" class="btn btn-primary btn-sm desktop-cta">Demander un devis</a>
+          <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      
+      <div class="nav-menu-mobile" id="mobileMenu">
+        <ul class="nav-links-mobile">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="../devis.html" class="btn btn-primary btn-block">Demander un devis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="formation-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'ariane">
+        <a href="../../index.html">Accueil</a> <span>/</span>
+        <a href="../services.html">Services</a> <span>/</span>
+        <span>Formation, Conseil &amp; Accompagnement</span>
+      </nav>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="eyebrow">DH TECH ACADEMY</span>
+          <h1 style="color: var(--color-white); font-size: clamp(2.2rem, 4.5vw, 3.2rem); margin-bottom: 1.25rem; line-height: 1.15;">
+            Formation, <span style="color: var(--color-orange);">Conseil</span> &amp; Accompagnement
+          </h1>
+          <p style="color: rgba(255, 255, 255, 0.75); font-size: 1.1rem; max-width: 600px; margin-bottom: 2rem;">
+            Notre centre de formation vous propose des programmes adaptés à tous les niveaux pour 
+            développer vos compétences digitales et réussir votre transformation numérique.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="../devis.html" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
+            <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20me%20former." class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">
+              Discuter sur WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div style="font-size: 8rem; animation: formationPulse 3s ease-in-out infinite;">🎓</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ===== SECTION CARTES PRINCIPALES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Nos services</span>
+          <h2 class="section-title">Des solutions pour développer vos compétences</h2>
+          <p class="section-sub">Formations pratiques, coaching personnalisé et accompagnement stratégique.</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Carte 1 : Formations -->
+          <div class="col-md-6 col-lg-3">
+            <div class="formation-card">
+              <span class="formation-badge">Certifiant</span>
+              <div class="formation-card-content">
+                <div class="formation-icon"><span>📚</span></div>
+                <h3>Formations Professionnelles</h3>
+                <p>Des programmes complets pour maîtriser les métiers du numérique.</p>
+                <ul>
+                  <li>Marketing digital</li>
+                  <li>Développement web</li>
+                  <li>Intelligence artificielle</li>
+                  <li>Bureautique &amp; outils</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 2 : Coaching -->
+          <div class="col-md-6 col-lg-3">
+            <div class="formation-card">
+              <span class="formation-badge">Personnalisé</span>
+              <div class="formation-card-content">
+                <div class="formation-icon"><span>🤝</span></div>
+                <h3>Coaching &amp; Mentorat</h3>
+                <p>Un accompagnement individuel pour atteindre vos objectifs rapidement.</p>
+                <ul>
+                  <li>Coaching individuel</li>
+                  <li>Mentorat d'entreprise</li>
+                  <li>Suivi personnalisé</li>
+                  <li>Plan de progression</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 3 : Conseil -->
+          <div class="col-md-6 col-lg-3">
+            <div class="formation-card">
+              <span class="formation-badge">Stratégique</span>
+              <div class="formation-card-content">
+                <div class="formation-icon"><span>💡</span></div>
+                <h3>Conseil &amp; Audit</h3>
+                <p>Des recommandations expertes pour optimiser votre stratégie digitale.</p>
+                <ul>
+                  <li>Audit digital complet</li>
+                  <li>Stratégie de transformation</li>
+                  <li>Analyse concurrentielle</li>
+                  <li>Recommandations claires</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 4 : Bootcamps -->
+          <div class="col-md-6 col-lg-3">
+            <div class="formation-card">
+              <span class="formation-badge">Intensif</span>
+              <div class="formation-card-content">
+                <div class="formation-icon"><span>🚀</span></div>
+                <h3>Bootcamps &amp; Ateliers</h3>
+                <p>Des sessions intensives pour acquérir des compétences rapidement.</p>
+                <ul>
+                  <li>Bootcamps intensifs</li>
+                  <li>Ateliers pratiques</li>
+                  <li>Projets réels</li>
+                  <li>Certification finale</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION PROGRAMMES ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Nos programmes</span>
+          <h2 class="section-title">Des formations adaptées à chaque besoin</h2>
+          <p class="section-sub">Choisissez le programme qui correspond à vos objectifs.</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="program-card program-marketing">
+              <div class="program-icon">📈</div>
+              <span class="program-duration">3 mois</span>
+              <h3>Marketing Digital</h3>
+              <p class="text-muted">SEO, publicité en ligne, réseaux sociaux, email marketing.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="program-card program-web">
+              <div class="program-icon">💻</div>
+              <span class="program-duration">6 mois</span>
+              <h3>Développement Web</h3>
+              <p class="text-muted">HTML, CSS, JavaScript, PHP, bases de données.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="program-card program-ia">
+              <div class="program-icon">🤖</div>
+              <span class="program-duration">4 mois</span>
+              <h3>Intelligence Artificielle</h3>
+              <p class="text-muted">Chatbots, automatisation, analyse de données.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="program-card program-bureautique">
+              <div class="program-icon">📊</div>
+              <span class="program-duration">2 mois</span>
+              <h3>Bureautique</h3>
+              <p class="text-muted">Word, Excel, PowerPoint, Google Workspace.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="program-card program-design">
+              <div class="program-icon">🎨</div>
+              <span class="program-duration">3 mois</span>
+              <h3>Design Graphique</h3>
+              <p class="text-muted">Photoshop, Illustrator, Canva, branding.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="program-card program-coaching">
+              <div class="program-icon">🎯</div>
+              <span class="program-duration">Flexible</span>
+              <h3>Coaching Personnalisé</h3>
+              <p class="text-muted">Accompagnement individuel selon vos besoins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION STATISTIQUES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Notre impact</span>
+          <h2 class="section-title">Des résultats qui parlent</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="formation-stat">
+              <div class="stat-value">100+</div>
+              <div class="stat-label">Étudiants formés</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="formation-stat">
+              <div class="stat-value">20+</div>
+              <div class="stat-label">Formations réalisées</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="formation-stat">
+              <div class="stat-value">95%</div>
+              <div class="stat-label">Taux de satisfaction</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="formation-stat">
+              <div class="stat-value">50+</div>
+              <div class="stat-label">Entreprises accompagnées</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION PROCESSUS ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Notre méthode</span>
+          <h2 class="section-title">Comment se déroule votre accompagnement</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="formation-process-step">
+              <div class="step-circle">1</div>
+              <h3>Évaluation</h3>
+              <p class="text-muted">Analyse de vos besoins et de votre niveau.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="formation-process-step">
+              <div class="step-circle">2</div>
+              <h3>Planification</h3>
+              <p class="text-muted">Définition du programme et du calendrier.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="formation-process-step">
+              <div class="step-circle">3</div>
+              <h3>Formation</h3>
+              <p class="text-muted">Sessions pratiques et exercices concrets.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="formation-process-step">
+              <div class="step-circle">4</div>
+              <h3>Certification</h3>
+              <p class="text-muted">Évaluation finale et remise de certificat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION POURQUOI NOUS CHOISIR ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="eyebrow">Pourquoi nous choisir ?</span>
+            <h2 class="section-title">Votre partenaire en développement de compétences</h2>
+            <ul class="check-list mt-4">
+              <li><strong>Formateurs expérimentés</strong> — Experts dans leur domaine</li>
+              <li><strong>Approche pratique</strong> — Projets réels et exercices concrets</li>
+              <li><strong>Petits groupes</strong> — Attention personnalisée</li>
+              <li><strong>Certification reconnue</strong> — Attestation de formation</li>
+              <li><strong>Suivi post-formation</strong> — Accompagnement après la formation</li>
+              <li><strong>Flexibilité</strong> — Présentiel et en ligne</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 rounded-4 shadow" style="background: var(--color-white); border: 2px solid var(--color-orange);">
+              <h3 class="mb-4 text-center">🎓 Ce que vous allez apprendre</h3>
+              <ul class="check-list">
+                <li>Maîtriser les outils digitaux essentiels</li>
+                <li>Créer une stratégie marketing efficace</li>
+                <li>Développer des sites web professionnels</li>
+                <li>Automatiser vos processus métiers</li>
+                <li>Analyser vos données pour décider</li>
+                <li>Gérer vos réseaux sociaux</li>
+                <li>Créer des contenus engageants</li>
+                <li>Optimiser votre présence en ligne</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="../devis.html" class="btn btn-primary btn-lg">Commencer ma formation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION CTA ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-band">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2>Prêt à développer vos compétences ?</h2>
+              <p>Contactez-nous et obtenez un programme personnalisé sous 48h.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="../devis.html" class="btn btn-dark btn-lg">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand-logo">
+            <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto;">
+            <div class="brand-text">
+              DH TECH AGENCY
+              <small>Le digital au service de votre croissance</small>
+            </div>
+          </div>
+          <p class="mb-3" style="font-size:0.92rem">Agence de transformation digitale et centre de formation numérique.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="https://wa.me/22369023957" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+            <a href="#" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="marketing-digital.html">Marketing digital</a></li>
+            <li><a href="communication-digitale.html">Communication digitale</a></li>
+            <li><a href="reseaux-sociaux.html">Réseaux sociaux</a></li>
+            <li><a href="branding-identite-visuelle.html">Branding</a></li>
+            <li><a href="creation-sites-web.html">Développement web</a></li>
+            <li><a href="automatisation-ia.html">IA &amp; Automatisation</a></li>
+            <li><a href="formation-accompagnement.html" class="active">Formation &amp; Conseil</a></li>
+            <li><a href="../services.html">Tous les services</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="../a-propos.html">À propos</a></li>
+            <li><a href="../equipe.html">Équipe</a></li>
+            <li><a href="../realisations.html">Réalisations</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4">
+          <h4>Contact</h4>
+          <ul>
+            <li>Bamako, Mali</li>
+            <li><a href="tel:+22369023957">+223 69-02-39-57</a></li>
+            <li><a href="https://wa.me/22369023957" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contact@dhtechagency.com">contact@dhtechagency.com</a></li>
+            <li><a href="../devis.html">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2025</span> DH TECH AGENCY. Tous droits réservés.</span>
+        <span>Le digital au service de votre croissance</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20me%20former." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/analytics.js"></script>
+</body>
+</html>

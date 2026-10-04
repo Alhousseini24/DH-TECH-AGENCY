@@ -1,0 +1,875 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#f5a315" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA & Automatisation | Chatbots & Solutions Intelligentes | DH TECH AGENCY</title>
+  <meta name="description" content="Solutions d'intelligence artificielle et d'automatisation : chatbots intelligents, automatisation des processus, analyse de données. Optimisez vos opérations avec DH TECH AGENCY." />
+  <meta name="keywords" content="intelligence artificielle Mali, chatbot WhatsApp, automatisation entreprise, IA Bamako, analyse données, DH TECH AGENCY" />
+  <meta name="author" content="DH TECH AGENCY" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dhtechagency.com/pages/services/automatisation-ia.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="DH TECH AGENCY" />
+  <meta property="og:title" content="IA & Automatisation | DH TECH AGENCY" />
+  <meta property="og:description" content="Chatbots intelligents, automatisation des processus et solutions IA pour optimiser vos opérations." />
+  <meta property="og:url" content="https://www.dhtechagency.com/pages/services/automatisation-ia.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/icons/Logo .png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+  <link rel="stylesheet" href="../../css/variables.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
+
+  <style>
+    /* ============================================================
+       STYLES SPÉCIFIQUES PAGE IA & AUTOMATISATION
+       ============================================================ */
+    
+    /* Hero */
+    .ia-hero {
+      background: linear-gradient(135deg, #050510 0%, #0a0a2a 30%, #1a0a3a 60%, #050510 100%);
+      padding: calc(var(--header-height) + 3rem) 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .ia-hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.15), transparent 70%);
+      border-radius: 50%;
+      animation: iaPulse 4s ease-in-out infinite;
+    }
+    
+    .ia-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -25%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.1), transparent 70%);
+      border-radius: 50%;
+      animation: iaPulse 5s ease-in-out infinite reverse;
+    }
+    
+    @keyframes iaPulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+    
+    /* Particules flottantes */
+    .ia-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .ia-particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--color-orange);
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: particleFloat 6s ease-in-out infinite;
+    }
+    
+    .ia-particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+    .ia-particle:nth-child(2) { top: 40%; left: 80%; animation-delay: 1s; }
+    .ia-particle:nth-child(3) { top: 60%; left: 30%; animation-delay: 2s; }
+    .ia-particle:nth-child(4) { top: 30%; left: 60%; animation-delay: 3s; }
+    .ia-particle:nth-child(5) { top: 70%; left: 70%; animation-delay: 4s; }
+    .ia-particle:nth-child(6) { top: 50%; left: 90%; animation-delay: 5s; }
+    
+    @keyframes particleFloat {
+      0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+      50% { transform: translateY(-30px) scale(1.5); opacity: 0.8; }
+    }
+    
+    /* Cartes IA animées */
+    .ia-card {
+      position: relative;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      height: 100%;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    
+    .ia-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #050510 0%, #0a0a2a 50%, #1a0a3a 100%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
+    
+    .ia-card:hover::before {
+      opacity: 1;
+    }
+    
+    .ia-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 60% 40%, rgba(245, 163, 21, 0.1) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .ia-card:hover::after {
+      opacity: 1;
+      animation: iaGlow 3s ease-in-out infinite;
+    }
+    
+    @keyframes iaGlow {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(5%, -5%) scale(1.1); }
+      66% { transform: translate(-5%, 5%) scale(1.05); }
+    }
+    
+    .ia-card-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .ia-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+      border-color: var(--color-orange);
+    }
+    
+    /* Icône animée */
+    .ia-icon {
+      width: 85px;
+      height: 85px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, rgba(245, 163, 21, 0.15), rgba(245, 163, 21, 0.05));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .ia-icon::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 0deg, transparent, rgba(245, 163, 21, 0.4), transparent, rgba(245, 163, 21, 0.4), transparent);
+      animation: iaIconSpin 3s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .ia-card:hover .ia-icon::before {
+      opacity: 1;
+    }
+    
+    @keyframes iaIconSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .ia-icon span {
+      position: relative;
+      z-index: 2;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .ia-card:hover .ia-icon {
+      background: var(--color-orange);
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 15px 40px rgba(245, 163, 21, 0.5);
+      border-radius: 50%;
+    }
+    
+    .ia-card:hover .ia-icon span {
+      transform: scale(1.3) rotate(5deg);
+    }
+    
+    /* Titre */
+    .ia-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.4s ease;
+    }
+    
+    .ia-card:hover h3 {
+      color: var(--color-orange);
+      transform: translateX(5px);
+    }
+    
+    .ia-card p {
+      color: var(--color-gray-500);
+      font-size: 0.93rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      transition: color 0.4s ease;
+    }
+    
+    .ia-card:hover p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    
+    /* Liste */
+    .ia-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    
+    .ia-card ul li {
+      padding: 0.4rem 0;
+      color: var(--color-gray-600);
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.3s ease;
+    }
+    
+    .ia-card:hover ul li {
+      color: rgba(255, 255, 255, 0.7);
+      transform: translateX(8px);
+    }
+    
+    .ia-card ul li::before {
+      content: '🤖';
+      font-size: 0.75rem;
+      transition: all 0.3s ease;
+    }
+    
+    .ia-card:hover ul li::before {
+      transform: scale(1.4) rotate(15deg);
+    }
+    
+    /* Badge */
+    .ia-badge {
+      position: absolute;
+      top: 20px;
+      right: -30px;
+      background: var(--color-orange);
+      color: var(--color-black);
+      padding: 0.4rem 2rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 3;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    
+    .ia-card:hover .ia-badge {
+      opacity: 1;
+      right: -20px;
+    }
+    
+    /* Statistiques */
+    .ia-stat {
+      text-align: center;
+      padding: 2rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .ia-stat::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background: var(--color-orange);
+      transition: width 0.4s ease;
+    }
+    
+    .ia-stat:hover::before {
+      width: 100%;
+    }
+    
+    .ia-stat:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      border-color: var(--color-orange);
+    }
+    
+    .ia-stat .stat-value {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--color-orange);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      transition: transform 0.4s ease;
+    }
+    
+    .ia-stat:hover .stat-value {
+      transform: scale(1.2);
+    }
+    
+    /* Cas d'usage */
+    .use-case-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      height: 100%;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      overflow: hidden;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+    }
+    
+    .use-case-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(245, 163, 21, 0.05), rgba(245, 163, 21, 0.15));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .use-case-card:hover::before {
+      opacity: 1;
+    }
+    
+    .use-case-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      border-color: var(--color-orange);
+    }
+    
+    .use-case-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      transition: all 0.5s ease;
+    }
+    
+    .use-case-card:hover .use-case-icon {
+      transform: scale(1.3) rotate(10deg);
+    }
+    
+    /* Processus */
+    .ia-process-step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    
+    .ia-process-step .step-circle {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: var(--color-black);
+      border: 3px solid var(--color-orange);
+      color: var(--color-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 1.25rem;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .ia-process-step:hover .step-circle {
+      background: var(--color-orange);
+      color: var(--color-black);
+      transform: scale(1.15) rotate(360deg);
+      box-shadow: 0 0 0 12px rgba(245, 163, 21, 0.1);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .ia-card {
+        padding: 2rem 1.5rem;
+      }
+      
+      .ia-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 2.2rem;
+      }
+      
+      .ia-stat .stat-value {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../../index.html" class="brand" aria-label="DH TECH AGENCY - Accueil">
+          <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto; border-radius: 8px;">
+          <span>DH TECH AGENCY<small>Le digital au service de votre croissance</small></span>
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="../devis.html" class="btn btn-primary btn-sm desktop-cta">Demander un devis</a>
+          <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      
+      <div class="nav-menu-mobile" id="mobileMenu">
+        <ul class="nav-links-mobile">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="../devis.html" class="btn btn-primary btn-block">Demander un devis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="ia-hero">
+    <!-- Particules flottantes -->
+    <div class="ia-particles">
+      <div class="ia-particle"></div>
+      <div class="ia-particle"></div>
+      <div class="ia-particle"></div>
+      <div class="ia-particle"></div>
+      <div class="ia-particle"></div>
+      <div class="ia-particle"></div>
+    </div>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'ariane">
+        <a href="../../index.html">Accueil</a> <span>/</span>
+        <a href="../services.html">Services</a> <span>/</span>
+        <span>IA &amp; Automatisation</span>
+      </nav>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="eyebrow">Service intelligence artificielle</span>
+          <h1 style="color: var(--color-white); font-size: clamp(2.2rem, 4.5vw, 3.2rem); margin-bottom: 1.25rem; line-height: 1.15;">
+            IA &amp; <span style="color: var(--color-orange);">Automatisation</span>
+          </h1>
+          <p style="color: rgba(255, 255, 255, 0.75); font-size: 1.1rem; max-width: 600px; margin-bottom: 2rem;">
+            Nous intégrons des solutions d'intelligence artificielle et d'automatisation pour optimiser 
+            vos opérations, réduire vos coûts et améliorer votre efficacité.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="../devis.html" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
+            <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20automatiser%20mon%20entreprise." class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">
+              Discuter sur WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div style="font-size: 8rem; animation: iaPulse 3s ease-in-out infinite;">🤖</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ===== SECTION CARTES PRINCIPALES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Nos solutions IA</span>
+          <h2 class="section-title">Des solutions intelligentes pour votre entreprise</h2>
+          <p class="section-sub">De l'automatisation simple aux systèmes IA complexes, nous transformons vos processus.</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Carte 1 : Chatbots -->
+          <div class="col-md-6 col-lg-3">
+            <div class="ia-card">
+              <span class="ia-badge">24/7</span>
+              <div class="ia-card-content">
+                <div class="ia-icon"><span>💬</span></div>
+                <h3>Chatbots Intelligents</h3>
+                <p>Des assistants virtuels qui répondent à vos clients à toute heure, automatiquement.</p>
+                <ul>
+                  <li>Chatbot WhatsApp Business</li>
+                  <li>Assistant site web</li>
+                  <li>Réponses automatiques</li>
+                  <li>Intégration CRM</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 2 : Automatisation -->
+          <div class="col-md-6 col-lg-3">
+            <div class="ia-card">
+              <span class="ia-badge">Efficacité</span>
+              <div class="ia-card-content">
+                <div class="ia-icon"><span>⚡</span></div>
+                <h3>Automatisation des Processus</h3>
+                <p>Automatisez vos tâches répétitives et libérez du temps pour vos équipes.</p>
+                <ul>
+                  <li>Workflows automatisés</li>
+                  <li>Intégration d'outils</li>
+                  <li>Gestion documentaire</li>
+                  <li>Notifications automatiques</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 3 : Analyse de données -->
+          <div class="col-md-6 col-lg-3">
+            <div class="ia-card">
+              <span class="ia-badge">Insights</span>
+              <div class="ia-card-content">
+                <div class="ia-icon"><span>📊</span></div>
+                <h3>Analyse de Données</h3>
+                <p>Transformez vos données brutes en insights actionnables pour vos décisions.</p>
+                <ul>
+                  <li>Tableaux de bord</li>
+                  <li>Rapports automatisés</li>
+                  <li>Prédictions &amp; tendances</li>
+                  <li>Visualisation data</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 4 : IA Générative -->
+          <div class="col-md-6 col-lg-3">
+            <div class="ia-card">
+              <span class="ia-badge">Innovation</span>
+              <div class="ia-card-content">
+                <div class="ia-icon"><span>🧠</span></div>
+                <h3>IA Générative</h3>
+                <p>Générez automatiquement des contenus, des images et des réponses intelligentes.</p>
+                <ul>
+                  <li>Génération de textes</li>
+                  <li>Création d'images</li>
+                  <li>Traduction automatique</li>
+                  <li>Résumé de documents</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION CAS D'USAGE ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Cas d'usage</span>
+          <h2 class="section-title">Comment l'IA transforme votre secteur</h2>
+          <p class="section-sub">Des solutions concrètes pour chaque type d'entreprise.</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="use-case-card">
+              <div class="use-case-icon">🏪</div>
+              <h3>Commerce</h3>
+              <p class="text-muted">Chatbot de vente, gestion de stock automatisée, recommandations produits.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="use-case-card">
+              <div class="use-case-icon">🏥</div>
+              <h3>Santé</h3>
+              <p class="text-muted">Prise de rendez-vous automatique, rappels patients, triage intelligent.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="use-case-card">
+              <div class="use-case-icon">🏦</div>
+              <h3>Finance</h3>
+              <p class="text-muted">Détection de fraude, analyse de crédit, reporting automatisé.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="use-case-card">
+              <div class="use-case-icon">🎓</div>
+              <h3>Éducation</h3>
+              <p class="text-muted">Correction automatique, tutorat IA, suivi personnalisé des étudiants.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION STATISTIQUES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Notre impact</span>
+          <h2 class="section-title">Des résultats mesurables</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="ia-stat">
+              <div class="stat-value">70%</div>
+              <div class="stat-label">Réduction des coûts</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="ia-stat">
+              <div class="stat-value">24/7</div>
+              <div class="stat-label">Disponibilité continue</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="ia-stat">
+              <div class="stat-value">5x</div>
+              <div class="stat-label">Productivité accrue</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="ia-stat">
+              <div class="stat-value">50+</div>
+              <div class="stat-label">Chatbots déployés</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION PROCESSUS ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Notre méthode</span>
+          <h2 class="section-title">Comment nous intégrons l'IA</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="ia-process-step">
+              <div class="step-circle">1</div>
+              <h3>Audit</h3>
+              <p class="text-muted">Identification des processus à automatiser.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ia-process-step">
+              <div class="step-circle">2</div>
+              <h3>Conception</h3>
+              <p class="text-muted">Définition de la solution IA adaptée.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ia-process-step">
+              <div class="step-circle">3</div>
+              <h3>Déploiement</h3>
+              <p class="text-muted">Intégration et formation de vos équipes.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ia-process-step">
+              <div class="step-circle">4</div>
+              <h3>Optimisation</h3>
+              <p class="text-muted">Suivi des performances et amélioration continue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION POURQUOI NOUS CHOISIR ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="eyebrow">Pourquoi nous choisir ?</span>
+            <h2 class="section-title">Votre partenaire en innovation</h2>
+            <ul class="check-list mt-4">
+              <li><strong>Expertise IA</strong> — Équipe spécialisée en intelligence artificielle</li>
+              <li><strong>Solutions sur mesure</strong> — Adaptées à votre contexte</li>
+              <li><strong>Intégration rapide</strong> — Déploiement en quelques semaines</li>
+              <li><strong>Formation incluse</strong> — Vos équipes sont accompagnées</li>
+              <li><strong>Support continu</strong> — Nous restons à vos côtés</li>
+              <li><strong>ROI garanti</strong> — Résultats mesurables dès les premiers mois</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 rounded-4 shadow" style="background: var(--color-white); border: 2px solid var(--color-orange);">
+              <h3 class="mb-4 text-center">🤖 Ce que nous automatisons</h3>
+              <ul class="check-list">
+                <li>Service client avec chatbot WhatsApp</li>
+                <li>Génération de factures automatiques</li>
+                <li>Rapports hebdomadaires automatisés</li>
+                <li>Réponses aux emails fréquents</li>
+                <li>Prise de rendez-vous en ligne</li>
+                <li>Gestion de stock intelligente</li>
+                <li>Analyse des avis clients</li>
+                <li>Prédiction des ventes</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="../devis.html" class="btn btn-primary btn-lg">Automatiser mon entreprise</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION CTA ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-band">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2>Prêt à automatiser votre entreprise ?</h2>
+              <p>Contactez-nous et obtenez un audit IA gratuit sous 48h.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="../devis.html" class="btn btn-dark btn-lg">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand-logo">
+            <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto;">
+            <div class="brand-text">
+              DH TECH AGENCY
+              <small>Le digital au service de votre croissance</small>
+            </div>
+          </div>
+          <p class="mb-3" style="font-size:0.92rem">Agence de transformation digitale et centre de formation numérique.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="https://wa.me/22369023957" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+            <a href="#" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="marketing-digital.html">Marketing digital</a></li>
+            <li><a href="communication-digitale.html">Communication digitale</a></li>
+            <li><a href="reseaux-sociaux.html">Réseaux sociaux</a></li>
+            <li><a href="branding-identite-visuelle.html">Branding</a></li>
+            <li><a href="creation-sites-web.html">Développement web</a></li>
+            <li><a href="automatisation-ia.html" class="active">IA &amp; Automatisation</a></li>
+            <li><a href="../services.html">Tous les services</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="../a-propos.html">À propos</a></li>
+            <li><a href="../equipe.html">Équipe</a></li>
+            <li><a href="../realisations.html">Réalisations</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4">
+          <h4>Contact</h4>
+          <ul>
+            <li>Bamako, Mali</li>
+            <li><a href="tel:+22369023957">+223 69-02-39-57</a></li>
+            <li><a href="https://wa.me/22369023957" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contact@dhtechagency.com">contact@dhtechagency.com</a></li>
+            <li><a href="../devis.html">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2025</span> DH TECH AGENCY. Tous droits réservés.</span>
+        <span>Le digital au service de votre croissance</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20automatiser%20mon%20entreprise." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | DH TECH AGENCY</title>
+  <meta name="description" content="Contactez DH TECH AGENCY pour discuter de votre projet de transformation digitale, marketing, développement web ou IA." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="apple-touch-icon" href="../assets/icons/Logo .png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  
+  <style>
+    /* Styles spécifiques à la page contact */
+    .contact-info-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      height: 100%;
+      transition: var(--transition);
+    }
+    .contact-info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: transparent;
+    }
+    .contact-info-card .icon-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(245, 163, 21, 0.12);
+      color: var(--color-orange);
+      display: grid;
+      place-items: center;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .contact-info-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+    .contact-info-card p,
+    .contact-info-card a {
+      color: var(--color-gray-500);
+      font-size: 0.92rem;
+      transition: var(--transition);
+    }
+    .contact-info-card a:hover {
+      color: var(--color-orange);
+    }
+    .contact-form {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+    }
+    .contact-form h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .contact-form .form-control {
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--color-gray-300);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    .contact-form .form-control:focus {
+      border-color: var(--color-orange);
+      box-shadow: 0 0 0 3px rgba(245, 163, 21, 0.15);
+    }
+    .contact-form textarea.form-control {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .contact-form .btn-submit {
+      width: 100%;
+      padding: 0.9rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .map-container {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      height: 300px;
+      background: var(--color-gray-200);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .social-contact {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 0.5rem;
+    }
+    .social-contact a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--color-gray-200);
+      display: grid;
+      place-items: center;
+      color: var(--color-gray-600);
+      transition: var(--transition);
+    }
+    .social-contact a:hover {
+      background: var(--color-orange);
+      border-color: var(--color-orange);
+      color: var(--color-black);
+    }
+    .hours-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--color-gray-100);
+      font-size: 0.9rem;
+      color: var(--color-gray-600);
+    }
+    .hours-list li:last-child {
+      border-bottom: none;
+    }
+    .hours-list li .day {
+      font-weight: 600;
+      color: var(--color-gray-800);
+    }
+    .form-label-required::after {
+      content: ' *';
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../index.html" class="brand" aria-label="DH TECH AGENCY - Accueil">
+          <img src="../assets/logos/Logo .png" alt="DH TECH AGENCY">
+          <span>DH TECH AGENCY<small>Le digital au service de votre croissance</small></span>
+        </a>
+        
+        <!-- Menu desktop -->
+        <ul class="nav-links">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="devis.html" class="btn btn-primary btn-sm desktop-cta">Demander un devis</a>
+          <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      
+      <!-- Menu mobile -->
+      <div class="nav-menu-mobile" id="mobileMenu">
+        <ul class="nav-links-mobile">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="devis.html" class="btn btn-primary btn-block">Demander un devis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span>/</span>
+        <span>Contact</span>
+      </div>
+      <span class="eyebrow">Nous contacter</span>
+      <h1>Parlons de votre projet</h1>
+      <p>Une question, un projet, une collaboration ? N'hésitez pas à nous contacter. Nous vous répondrons dans les plus brefs délais.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <main>
+    <section>
+      <div class="container">
+        <div class="row g-4">
+          <!-- Informations de contact -->
+          <div class="col-lg-4">
+            <div class="row g-4">
+              <!-- Adresse -->
+              <div class="col-12">
+                <div class="contact-info-card">
+                  <div class="icon-circle">📍</div>
+                  <h3>Adresse</h3>
+                  <p>Bamako, Mali<br>Quartier Hippodrome</p>
+                </div>
+              </div>
+              
+              <!-- Téléphone -->
+              <div class="col-12">
+                <div class="contact-info-card">
+                  <div class="icon-circle">📞</div>
+                  <h3>Téléphone</h3>
+                  <p><a href="tel:+22369023957">+223 69-02-39-57</a></p>
+                  <p><a href="tel:+22370191624">+223 70-19-16-24</a></p>
+                </div>
+              </div>
+              
+              <!-- Email -->
+              <div class="col-12">
+                <div class="contact-info-card">
+                  <div class="icon-circle">✉️</div>
+                  <h3>Email</h3>
+                  <p><a href="mailto:contact@dhtechagency.com">contact@dhtechagency.com</a></p>
+                </div>
+              </div>
+              
+              <!-- Horaires -->
+              <div class="col-12">
+                <div class="contact-info-card">
+                  <div class="icon-circle">🕐</div>
+                  <h3>Horaires d'ouverture</h3>
+                  <ul class="hours-list">
+                    <li><span class="day">Lundi - Vendredi</span> <span>08:00 - 18:00</span></li>
+                    <li><span class="day">Samedi</span> <span>09:00 - 14:00</span></li>
+                    <li><span class="day">Dimanche</span> <span>Fermé</span></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- Réseaux sociaux -->
+              <div class="col-12">
+                <div class="contact-info-card">
+                  <div class="icon-circle">🌐</div>
+                  <h3>Suivez-nous</h3>
+                  <p style="margin-bottom:0.75rem;">Retrouvez-nous sur nos réseaux sociaux</p>
+                  <div class="social-contact">
+                    <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1 .3-1.7 1.8-1.7H17V2.2c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v4h3v8z"/></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.6 4.75 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+                    <a href="https://wa.me/22369023957" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Formulaire de contact -->
+          <div class="col-lg-8">
+            <div class="contact-form">
+              <h2>Envoyez-nous un message</h2>
+              <p class="text-muted mb-4">Remplissez le formulaire ci-dessous et nous vous répondrons sous 24h.</p>
+              
+              <form id="contactForm" action="#" method="POST">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name" class="form-label-required">Nom complet</label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email" class="form-label-required">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="phone">Téléphone</label>
+                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="+223 XX XX XX XX">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="subject" class="form-label-required">Sujet</label>
+                      <select class="form-control" id="subject" name="subject" required>
+                        <option value="">Choisissez un sujet</option>
+                        <option value="marketing">Marketing Digital</option>
+                        <option value="web">Développement Web</option>
+                        <option value="ia">IA & Automatisation</option>
+                        <option value="formation">Formation</option>
+                        <option value="communication">Communication Digitale</option>
+                        <option value="devis">Demande de devis</option>
+                        <option value="autre">Autre</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="message" class="form-label-required">Message</label>
+                      <textarea class="form-control" id="message" name="message" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="consent" name="consent" required>
+                      <label class="form-check-label" for="consent">
+                        J'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande.
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-submit">
+                      Envoyer le message →
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MAP ===== -->
+    <section class="py-0">
+      <div class="container">
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.0!2d-3.0064!3d16.7666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQ1JzU5LjciTiAzwrAwMCcyMy4wIlc!5e0!3m2!1sfr!2sml!4v1700000000000" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localisation de DH TECH AGENCY à Tombouctou"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="cta-band">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2>Prêt à passer à l'action ?</h2>
+              <p>Obtenez un devis gratuit sous 48h et découvrez comment nous pouvons vous accompagner.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="devis.html" class="btn btn-dark btn-lg">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand" aria-label="DH TECH AGENCY - Accueil">
+          <img src="assets/logos/Logo .png" alt="DH TECH AGENCY">
+          <span>DH TECH AGENCY<small>Le digital au service de votre croissance</small></span>
+        </a>
+          <p class="mb-3" style="font-size:0.92rem">Agence de transformation digitale et centre de formation numérique. Le digital au service de votre croissance.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1 .3-1.7 1.8-1.7H17V2.2c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v4h3v8z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.75 2.6 4.75 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+            <a href="https://wa.me/22369023957" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services/marketing-digital.html">Marketing digital</a></li>
+            <li><a href="services/creation-site-web.html">Création de sites</a></li>
+            <li><a href="services/automatisation-ia.html">IA &amp; Automatisation</a></li>
+            <li><a href="services/formations.html">Formations</a></li>
+            <li><a href="services.html">Tous les services</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="equipe.html">Équipe</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="etudes-de-cas.html">Études de cas</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4">
+          <h4>Contact</h4>
+          <ul>
+            <li>Bamako, Mali</li>
+            <li><a href="tel:+22369023957">+223 69-02-39-57</a></li>
+            <li><a href="tel:+22370191624">+223 70-19-16-24</a></li>
+            <li><a href="https://wa.me/22369023957" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contact@dhtechagency.com">contact@dhtechagency.com</a></li>
+            <li><a href="contact.html">Nous contacter</a></li>
+            <li><a href="devis.html">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2025</span> DH TECH AGENCY. Tous droits réservés.</span>
+        <span>Le digital au service de votre croissance</span>
+        <span>
+          <a href="mentions-legales.html">Mentions légales</a> ·
+          <a href="politique-confidentialite.html">Confidentialité</a> ·
+          <a href="cgu.html">CGU</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20discuter%20de%20mon%20projet." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

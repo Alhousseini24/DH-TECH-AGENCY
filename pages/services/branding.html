@@ -1,0 +1,858 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#f5a315" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branding & Identité Visuelle | Design & Logo | DH TECH AGENCY</title>
+  <meta name="description" content="Création d'identités visuelles fortes : logos, chartes graphiques, packaging, refonte de marque. Design professionnel qui vous démarque de la concurrence." />
+  <meta name="keywords" content="branding Mali, création logo Bamako, identité visuelle, charte graphique, design packaging, DH TECH AGENCY" />
+  <meta name="author" content="DH TECH AGENCY" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.dhtechagency.com/pages/services/branding-identite-visuelle.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="DH TECH AGENCY" />
+  <meta property="og:title" content="Branding & Identité Visuelle | DH TECH AGENCY" />
+  <meta property="og:description" content="Création d'identités visuelles fortes : logos, chartes graphiques, packaging et refonte de marque." />
+  <meta property="og:url" content="https://www.dhtechagency.com/pages/services/branding-identite-visuelle.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+  <link rel="apple-touch-icon" href="../../assets/icons/Logo .png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+  <link rel="stylesheet" href="../../css/variables.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
+
+  <style>
+    /* ============================================================
+       STYLES SPÉCIFIQUES PAGE BRANDING & IDENTITÉ VISUELLE
+       ============================================================ */
+    
+    /* Hero */
+    .branding-hero {
+      background: linear-gradient(135deg, #0a0a0a 0%, #2a1a0a 30%, #3a2a0a 60%, #0a0a0a 100%);
+      padding: calc(var(--header-height) + 3rem) 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .branding-hero::before {
+      content: '';
+      position: absolute;
+      top: -35%;
+      left: -15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.15), transparent 70%);
+      border-radius: 50%;
+      animation: brandingPulse 5s ease-in-out infinite;
+    }
+    
+    .branding-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      right: -10%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(245, 163, 21, 0.1), transparent 70%);
+      border-radius: 50%;
+      animation: brandingPulse 4s ease-in-out infinite reverse;
+    }
+    
+    @keyframes brandingPulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.25); opacity: 1; }
+    }
+    
+    /* Cartes branding animées */
+    .branding-card {
+      position: relative;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      height: 100%;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    
+    .branding-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #0a0a0a 0%, #2a1a0a 50%, #3a2a0a 100%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
+    
+    .branding-card:hover::before {
+      opacity: 1;
+    }
+    
+    .branding-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 50%, rgba(245, 163, 21, 0.08) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .branding-card:hover::after {
+      opacity: 1;
+      animation: brandingGlow 4s ease-in-out infinite;
+    }
+    
+    @keyframes brandingGlow {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(5%, 5%) scale(1.1); }
+      50% { transform: translate(-5%, -5%) scale(1.05); }
+      75% { transform: translate(-5%, 5%) scale(1.1); }
+    }
+    
+    .branding-card-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .branding-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+      border-color: var(--color-orange);
+    }
+    
+    /* Icône animée */
+    .branding-icon {
+      width: 85px;
+      height: 85px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, rgba(245, 163, 21, 0.2), rgba(245, 163, 21, 0.05));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .branding-icon::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 0deg, transparent, rgba(245, 163, 21, 0.4), transparent, rgba(245, 163, 21, 0.4), transparent);
+      animation: brandingIconSpin 3s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .branding-card:hover .branding-icon::before {
+      opacity: 1;
+    }
+    
+    @keyframes brandingIconSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .branding-icon span {
+      position: relative;
+      z-index: 2;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .branding-card:hover .branding-icon {
+      background: var(--color-orange);
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 15px 40px rgba(245, 163, 21, 0.5);
+      border-radius: 50%;
+    }
+    
+    .branding-card:hover .branding-icon span {
+      transform: scale(1.3) rotate(5deg);
+    }
+    
+    /* Titre */
+    .branding-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.4s ease;
+    }
+    
+    .branding-card:hover h3 {
+      color: var(--color-orange);
+      transform: translateX(5px);
+      letter-spacing: 0.03em;
+    }
+    
+    .branding-card p {
+      color: var(--color-gray-500);
+      font-size: 0.93rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      transition: color 0.4s ease;
+    }
+    
+    .branding-card:hover p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    
+    /* Liste */
+    .branding-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    
+    .branding-card ul li {
+      padding: 0.4rem 0;
+      color: var(--color-gray-600);
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.3s ease;
+    }
+    
+    .branding-card:hover ul li {
+      color: rgba(255, 255, 255, 0.7);
+      transform: translateX(8px);
+    }
+    
+    .branding-card ul li::before {
+      content: '🎨';
+      font-size: 0.75rem;
+      transition: all 0.3s ease;
+    }
+    
+    .branding-card:hover ul li::before {
+      transform: scale(1.4) rotate(15deg);
+    }
+    
+    /* Badge */
+    .branding-badge {
+      position: absolute;
+      top: 20px;
+      right: -30px;
+      background: var(--color-orange);
+      color: var(--color-black);
+      padding: 0.4rem 2rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 3;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    
+    .branding-card:hover .branding-badge {
+      opacity: 1;
+      right: -20px;
+    }
+    
+    /* Galerie de projets */
+    .branding-project-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .branding-project-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    
+    .branding-project-card:hover img {
+      transform: scale(1.15);
+    }
+    
+    .branding-project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3), transparent);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .branding-project-card:hover .branding-project-overlay {
+      opacity: 1;
+    }
+    
+    .branding-project-overlay h3 {
+      color: var(--color-white);
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      transform: translateY(20px);
+      transition: transform 0.4s ease 0.1s;
+    }
+    
+    .branding-project-overlay span {
+      color: var(--color-orange);
+      font-size: 0.8rem;
+      font-weight: 600;
+      transform: translateY(20px);
+      transition: transform 0.4s ease 0.2s;
+    }
+    
+    .branding-project-card:hover .branding-project-overlay h3,
+    .branding-project-card:hover .branding-project-overlay span {
+      transform: translateY(0);
+    }
+    
+    /* Statistiques */
+    .branding-stat {
+      text-align: center;
+      padding: 2rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .branding-stat::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background: var(--color-orange);
+      transition: width 0.4s ease;
+    }
+    
+    .branding-stat:hover::before {
+      width: 100%;
+    }
+    
+    .branding-stat:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      border-color: var(--color-orange);
+    }
+    
+    .branding-stat .stat-value {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--color-orange);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      transition: transform 0.4s ease;
+    }
+    
+    .branding-stat:hover .stat-value {
+      transform: scale(1.2);
+    }
+    
+    /* Processus */
+    .branding-process-step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    
+    .branding-process-step .step-circle {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: var(--color-black);
+      border: 3px solid var(--color-orange);
+      color: var(--color-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 1.25rem;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .branding-process-step:hover .step-circle {
+      background: var(--color-orange);
+      color: var(--color-black);
+      transform: scale(1.15) rotate(360deg);
+      box-shadow: 0 0 0 12px rgba(245, 163, 21, 0.1);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .branding-card {
+        padding: 2rem 1.5rem;
+      }
+      
+      .branding-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 2.2rem;
+      }
+      
+      .branding-stat .stat-value {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../../index.html" class="brand" aria-label="DH TECH AGENCY - Accueil">
+          <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto; border-radius: 8px;">
+          <span>DH TECH AGENCY<small>Le digital au service de votre croissance</small></span>
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../etudes-de-cas.html">Études de cas</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="../devis.html" class="btn btn-primary btn-sm desktop-cta">Demander un devis</a>
+          <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      
+      <div class="nav-menu-mobile" id="mobileMenu">
+        <ul class="nav-links-mobile">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../services.html" class="active">Services</a></li>
+          <li><a href="../realisations.html">Réalisations</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="../devis.html" class="btn btn-primary btn-block">Demander un devis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="branding-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'ariane">
+        <a href="../../index.html">Accueil</a> <span>/</span>
+        <a href="../services.html">Services</a> <span>/</span>
+        <span>Branding &amp; Identité Visuelle</span>
+      </nav>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="eyebrow">Service design</span>
+          <h1 style="color: var(--color-white); font-size: clamp(2.2rem, 4.5vw, 3.2rem); margin-bottom: 1.25rem; line-height: 1.15;">
+            Branding &amp; <span style="color: var(--color-orange);">Identité Visuelle</span>
+          </h1>
+          <p style="color: rgba(255, 255, 255, 0.75); font-size: 1.1rem; max-width: 600px; margin-bottom: 2rem;">
+            Nous créons des identités visuelles fortes et mémorables qui reflètent vos valeurs 
+            et vous démarquent durablement de la concurrence.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="../devis.html" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
+            <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20créer%20mon%20identité%20visuelle." class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">
+              Discuter sur WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div style="font-size: 8rem; animation: brandingPulse 3s ease-in-out infinite;">🎨</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ===== SECTION CARTES PRINCIPALES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Nos expertises</span>
+          <h2 class="section-title">Des identités visuelles qui marquent</h2>
+          <p class="section-sub">Du logo à la charte graphique complète, nous construisons votre image de marque.</p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Carte 1 : Logo -->
+          <div class="col-md-6 col-lg-3">
+            <div class="branding-card">
+              <span class="branding-badge">Signature</span>
+              <div class="branding-card-content">
+                <div class="branding-icon"><span>✏️</span></div>
+                <h3>Création de Logo</h3>
+                <p>Un logo unique et mémorable qui devient la signature visuelle de votre marque.</p>
+                <ul>
+                  <li>Logo principal</li>
+                  <li>Déclinaisons (couleurs, N&B)</li>
+                  <li>Favicon &amp; versions sociales</li>
+                  <li>Fichiers sources (AI, SVG, PNG)</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 2 : Charte Graphique -->
+          <div class="col-md-6 col-lg-3">
+            <div class="branding-card">
+              <span class="branding-badge">Cohérence</span>
+              <div class="branding-card-content">
+                <div class="branding-icon"><span>📐</span></div>
+                <h3>Charte Graphique</h3>
+                <p>Un guide complet pour garantir la cohérence de votre marque sur tous les supports.</p>
+                <ul>
+                  <li>Palette de couleurs</li>
+                  <li>Typographies</li>
+                  <li>Règles d'utilisation</li>
+                  <li>Guide de style complet</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 3 : Supports -->
+          <div class="col-md-6 col-lg-3">
+            <div class="branding-card">
+              <span class="branding-badge">Print &amp; Digital</span>
+              <div class="branding-card-content">
+                <div class="branding-icon"><span>🖨️</span></div>
+                <h3>Supports Print &amp; Digitaux</h3>
+                <p>Cartes de visite, flyers, brochures et supports digitaux à votre image.</p>
+                <ul>
+                  <li>Cartes de visite</li>
+                  <li>Flyers &amp; brochures</li>
+                  <li>Bannières &amp; affiches</li>
+                  <li>Supports réseaux sociaux</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carte 4 : Packaging -->
+          <div class="col-md-6 col-lg-3">
+            <div class="branding-card">
+              <span class="branding-badge">Produit</span>
+              <div class="branding-card-content">
+                <div class="branding-icon"><span>📦</span></div>
+                <h3>Packaging &amp; Merchandising</h3>
+                <p>Des emballages et objets publicitaires qui renforcent votre présence de marque.</p>
+                <ul>
+                  <li>Design d'emballage</li>
+                  <li>Étiquettes &amp; stickers</li>
+                  <li>Goodies &amp; objets promo</li>
+                  <li>Signalétique</li>
+                </ul>
+                <a href="../devis.html" class="card-link">Demander un devis →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION GALERIE PROJETS ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Nos créations</span>
+          <h2 class="section-title">Un aperçu de nos réalisations</h2>
+          <p class="section-sub">Découvrez quelques-unes de nos créations récentes.</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="branding-project-card">
+              <img src="../../assets/branding/logo-1.jpg" alt="Création de logo - Projet 1" loading="lazy" />
+              <div class="branding-project-overlay">
+                <h3>Logo Restaurant</h3>
+                <span>Identité complète</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="branding-project-card">
+              <img src="../../assets/branding/logo-2.jpg" alt="Création de logo - Projet 2" loading="lazy" />
+              <div class="branding-project-overlay">
+                <h3>Logo Tech Startup</h3>
+                <span>Branding digital</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="branding-project-card">
+              <img src="../../assets/branding/logo-3.jpg" alt="Création de logo - Projet 3" loading="lazy" />
+              <div class="branding-project-overlay">
+                <h3>Packaging Produit</h3>
+                <span>Design d'emballage</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="branding-project-card">
+              <img src="../../assets/branding/logo-4.jpg" alt="Création de logo - Projet 4" loading="lazy" />
+              <div class="branding-project-overlay">
+                <h3>Charte Graphique</h3>
+                <span>Guide de marque</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION STATISTIQUES ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Notre impact</span>
+          <h2 class="section-title">Des marques qui se démarquent</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="branding-stat">
+              <div class="stat-value">100+</div>
+              <div class="stat-label">Logos créés</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="branding-stat">
+              <div class="stat-value">50+</div>
+              <div class="stat-label">Chartes graphiques</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="branding-stat">
+              <div class="stat-value">200+</div>
+              <div class="stat-label">Supports créés</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="branding-stat">
+              <div class="stat-value">30+</div>
+              <div class="stat-label">Refontes de marque</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION PROCESSUS ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Notre méthode</span>
+          <h2 class="section-title">Comment nous créons votre identité</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="branding-process-step">
+              <div class="step-circle">1</div>
+              <h3>Découverte</h3>
+              <p class="text-muted">Compréhension de votre marque, vos valeurs et votre audience.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="branding-process-step">
+              <div class="step-circle">2</div>
+              <h3>Exploration</h3>
+              <p class="text-muted">Recherche créative et propositions de directions visuelles.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="branding-process-step">
+              <div class="step-circle">3</div>
+              <h3>Création</h3>
+              <p class="text-muted">Développement du logo et des éléments de la charte.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="branding-process-step">
+              <div class="step-circle">4</div>
+              <h3>Livraison</h3>
+              <p class="text-muted">Remise des fichiers sources et du guide d'utilisation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION POURQUOI NOUS CHOISIR ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="eyebrow">Pourquoi nous choisir ?</span>
+            <h2 class="section-title">Votre partenaire créatif</h2>
+            <ul class="check-list mt-4">
+              <li><strong>Créativité unique</strong> — Des designs qui sortent du lot</li>
+              <li><strong>Écoute attentive</strong> — Nous comprenons vos besoins</li>
+              <li><strong>Révisions illimitées</strong> — Jusqu'à votre satisfaction</li>
+              <li><strong>Fichiers sources inclus</strong> — Formats professionnels</li>
+              <li><strong>Délais respectés</strong> — Livraison dans les temps</li>
+              <li><strong>Accompagnement complet</strong> — De la création à l'application</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 rounded-4 shadow" style="background: var(--color-white); border: 2px solid var(--color-orange);">          <h3 class="mb-4 text-center">🎨 Ce que nous créons pour vous</h3>
+              <ul class="check-list">
+                <li>Logo principal + déclinaisons</li>
+                <li>Charte graphique complète</li>
+                <li>Cartes de visite professionnelles</li>
+                <li>Papeterie d'entreprise</li>
+                <li>Bannières &amp; affiches publicitaires</li>
+                <li>Visuels pour réseaux sociaux</li>
+                <li>Packaging produit</li>
+                <li>Signalétique &amp; enseigne</li>
+              </ul>
+              <div class="text-center mt-4">
+                <a href="../devis.html" class="btn btn-primary btn-lg">Créer mon identité</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION CTA ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-band">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2>Prêt à créer une marque mémorable ?</h2>
+              <p>Contactez-nous et obtenez une proposition créative gratuite sous 48h.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="../devis.html" class="btn btn-dark btn-lg">Demander un devis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand-logo">
+            <img src="../../assets/logos/Logo .png" alt="DH TECH AGENCY" style="height: 40px; width: auto;">
+            <div class="brand-text">
+              DH TECH AGENCY
+              <small>Le digital au service de votre croissance</small>
+            </div>
+          </div>
+          <p class="mb-3" style="font-size:0.92rem">Agence de transformation digitale et centre de formation numérique.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="https://wa.me/22369023957" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+            <a href="#" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="marketing-digital.html">Marketing digital</a></li>
+            <li><a href="communication-digitale.html">Communication digitale</a></li>
+            <li><a href="reseaux-sociaux.html">Réseaux sociaux</a></li>
+            <li><a href="branding-identite-visuelle.html" class="active">Branding</a></li>
+            <li><a href="creation-sites-web.html">Développement web</a></li>
+            <li><a href="../services.html">Tous les services</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="../a-propos.html">À propos</a></li>
+            <li><a href="../equipe.html">Équipe</a></li>
+            <li><a href="../realisations.html">Réalisations</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4">
+          <h4>Contact</h4>
+          <ul>
+            <li>Bamako, Mali</li>
+            <li><a href="tel:+22369023957">+223 69-02-39-57</a></li>
+            <li><a href="https://wa.me/22369023957" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:contact@dhtechagency.com">contact@dhtechagency.com</a></li>
+            <li><a href="../devis.html">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2025</span> DH TECH AGENCY. Tous droits réservés.</span>
+        <span>Le digital au service de votre croissance</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/22369023957?text=Bonjour%20DH%20TECH%20AGENCY%2C%20je%20souhaite%20créer%20mon%20identité%20visuelle." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.1.2-.3.3-.5s0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 15.7 15.7 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/analytics.js"></script>
+</body>
+</html>
