@@ -33,7 +33,7 @@ dh-tech-agency/
     ├── contact.html
     ├── devis.html
     ├── documents.html
-    ├── rendez-vous.html
+    ├── rendez-vous.htmlb
     ├── mentions-legales.html
     ├── politique-confidentialite.html
     ├── cgu.html
